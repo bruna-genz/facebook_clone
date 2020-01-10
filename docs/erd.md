@@ -1,3 +1,1 @@
-# Data Architecture for Models
-
-![img](erd.png)
+![img](../app/assets/images/data_architecture.png)
