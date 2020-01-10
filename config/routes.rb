@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: "user#sign_up"
+  devise_for :users
 end
