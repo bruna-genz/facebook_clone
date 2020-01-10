@@ -1,0 +1,1 @@
+![img](../app/assets/images/data_architecture.png)
