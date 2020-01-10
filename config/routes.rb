@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root to: "user#new"
+  root to: "user#sign_up"
 end
