@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
 
   context 'validation tests' do
 
-  # Name validations 
+    # Name validations 
 
     it 'user must have a first name' do
       user.first_name = nil
@@ -40,13 +40,13 @@ RSpec.describe User, type: :model do
       expect(user).to_not be_valid
     end
 
-    #Email validations 
+    # Email validations 
       # already checked by devise 
       
-    #password validations 
+    # password validations 
       # already checked by devise gem
 
-    #password_confirmation validations 
+    # password_confirmation validations 
       # already checked by devise gem
 
     # Birthday validations
@@ -65,5 +65,12 @@ RSpec.describe User, type: :model do
 
     end
 
+  # Associations' tests
 
+  context 'Associations tests' do
+    it 'User has many posts' do
+      user = User.reflect_on_association(:post)
+      expect(user.macro).to eq(:has_many)
+    end
+  end
 end
