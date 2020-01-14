@@ -8,6 +8,6 @@ Rails.application.routes.draw do
                   sessions: 'sessions'
                }
   
-  resources :post
+  resources :posts
   resources :contents
 end
