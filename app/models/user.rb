@@ -15,6 +15,10 @@ class User < ApplicationRecord
 
   ##Gender
   validates :gender, presence: true
+
+  # Associations
+
+  has_many :posts, foreign_key: 'creator_id'
   
 
 

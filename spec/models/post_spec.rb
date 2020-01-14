@@ -24,8 +24,8 @@ RSpec.describe Post, type: :model do
     # Associations' tests
     context 'Associations tests' do
         it 'Post has one creator' do
-            post = Post.reflect_on_association(:user)
-            expect(user.macro).to eq(:belongs_to)
+            post = Post.reflect_on_association(:creator)
+            expect(post.macro).to eq(:belongs_to)
         end
     end
 end

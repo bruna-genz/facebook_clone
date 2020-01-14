@@ -69,7 +69,7 @@ RSpec.describe User, type: :model do
 
   context 'Associations tests' do
     it 'User has many posts' do
-      user = User.reflect_on_association(:post)
+      user = User.reflect_on_association(:posts)
       expect(user.macro).to eq(:has_many)
     end
   end
