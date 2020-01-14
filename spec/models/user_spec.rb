@@ -39,7 +39,31 @@ RSpec.describe User, type: :model do
       user.last_name = "D" * 31
       expect(user).to_not be_valid
     end
-  end
+
+    #Email validations 
+      # already checked by devise 
+      
+    #password validations 
+      # already checked by devise gem
+
+    #password_confirmation validations 
+      # already checked by devise gem
+
+    # Birthday validations
+
+    it 'User must have a birthday' do
+      user.birthday = nil
+      expect(user).to_not be_valid
+    end
+
+    # Gender validations
+
+    it 'user must have a gender' do
+      user.gender = nil
+      expect(user).to_not be_valid
+    end
+
+    end
 
 
 end
