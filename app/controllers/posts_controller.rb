@@ -8,9 +8,7 @@ class PostsController < ApplicationController
             flash[:success] = "Post created"
             redirect_to root_path
         else
-            render 'new'
-            flash[:danger] = 'Content can\'t be blank'
-            
+            render :template => 'dashboards/show'          
         end
     end
 
