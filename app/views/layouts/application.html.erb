@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+      <div class="flash">
+        <div class="<%= flash_class(key) %> closable">
+        <i class="close icon"></i>
+        <%= value %>
+        </div>
+      </div>
+    <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

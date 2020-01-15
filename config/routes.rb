@@ -7,7 +7,6 @@ Rails.application.routes.draw do
                   registrations: 'registrations',
                   sessions: 'sessions'
                }
-  get 'dashboards/show' => 'posts#new'
   resources :posts
   resources :contents
 end
