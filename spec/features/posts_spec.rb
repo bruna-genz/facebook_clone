@@ -16,17 +16,15 @@ RSpec.feature "Posts", type: :feature do
     end
 
     scenario 'Should be successful' do
-      visit new_post_path
       within('form') do
-        fill_in 'Content', with: 'This is a post'
+        fill_in 'What are you thinking?', with: 'This is a post'
       end
-      click_button 'Post'
+      click_button 'Create post'
       expect(page).to have_content('Post created')
     end
 
     scenario 'Should fail' do
-      visit new_post_path
-      click_button 'Post'
+      click_button 'Create post'
       expect(page).to have_content('Content can\'t be blank')
     end
   end

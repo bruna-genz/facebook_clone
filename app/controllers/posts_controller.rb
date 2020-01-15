@@ -9,6 +9,8 @@ class PostsController < ApplicationController
             redirect_to root_path
         else
             render 'new'
+            flash[:danger] = 'Content can\'t be blank'
+            
         end
     end
 

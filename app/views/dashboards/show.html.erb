@@ -12,6 +12,7 @@
 
 <%= form_for @post, :url => { :controller => "posts", :action => "create" }, :html => {:method => :post} do |f| %>
 
+  <%= render 'dashboards/partials/errors' %>
   <%= f.label :content, 'What are you thinking?'%> <br/>
   <%= f.text_area :content, size: '40x20', placeholder: 'Post something...' %><br/>
 
