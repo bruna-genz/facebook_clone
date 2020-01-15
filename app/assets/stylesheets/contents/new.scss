@@ -3,10 +3,40 @@
 
 .new_user {
     display: flex;
-    background-color: $facebook-blue;
-    
+    background-color: #3B5998;
     color: white;
-    @include font-face;
-    font-family: 'SourceSansPro'
-
+    font-family: 'Facebolf';
+    justify-content: space-around;
+    padding: 0 13em;
+    .form-right {
+        display: flex;
+        margin-top: 1em;
+        .field {
+            margin: 0 0.5em;
+            #user_email,
+            #user_password {
+                border: solid 1px black;
+                width: 12em;
+                height: 2em;
+                padding: 0.5em;
+            }
+        }
+        #remember-me {
+            margin: 0.5em;
+        }
+    }
+    .form-left {
+        margin-top: 1em;
+    }
+    #sign-in-btn {
+        background-color: rgb(89, 117, 177);
+        border: solid 1px  rgb(42, 56, 85);
+        color: white;
+        padding: 0.3em;
+        font-weight: bold;
+        margin: 1.4em 0;
+        &:hover {
+            background-color: #3B5998;
+        }
+    }
 }
