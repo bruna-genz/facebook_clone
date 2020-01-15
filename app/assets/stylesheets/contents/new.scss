@@ -1,0 +1,12 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.new_user {
+    display: flex;
+    background-color: $facebook-blue;
+    
+    color: white;
+    @include font-face;
+    font-family: 'SourceSansPro'
+
+}

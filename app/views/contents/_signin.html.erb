@@ -1,4 +1,6 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <i class="fb_logo img sp_W-v012zTIDG_1_5x sx_1bef2a"><u>Facebook</u></i>  
+
     <div class="field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -7,14 +9,15 @@
     <div class="field">
       <%= f.label :password %><br />
       <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+    
 
-    <% if devise_mapping.rememberable? -%>
-        <div class="field">
+    <% if devise_mapping.rememberable? -%><br />
+        <div class="field"><br />
           <%= f.check_box :remember_me %>
           <%= f.label :remember_me %>
         </div>
     <% end -%>
+    </div>
 
     <div class="actions">
       <%= f.submit "Log in" %>
