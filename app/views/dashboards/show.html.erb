@@ -1,6 +1,9 @@
 <h2>Hello <i><%= current_user.email %></i></h2>
 
+
 <% if user_signed_in? %>
+  
+  <%= image_tag current_user.gravatar_url, :class => "gravatar" %>
    <li>
       <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
    </li>

@@ -5,22 +5,17 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # Validations
-
-  ## Name
   validates :first_name, presence: true, length: { in: 2..30 }
   validates :last_name, presence: true, length: { in: 2..30 }
-
-  ##Birthday
   validates :birthday, presence: true
-
-  ##Gender
   validates :gender, presence: true
 
   # Associations
-
   has_many :posts, foreign_key: 'creator_id'
   
-
+  #gravatastic
+  include Gravtastic
+  gravtastic
 
 
 end
