@@ -12,10 +12,4 @@ class User < ApplicationRecord
 
   # Associations
   has_many :posts, foreign_key: 'creator_id'
-  
-  #gravatastic
-  include Gravtastic
-  gravtastic
-
-
 end

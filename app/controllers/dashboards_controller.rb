@@ -4,4 +4,10 @@ class DashboardsController < ApplicationController
     def show
         @post = Post.new  
     end
+
+    def profile
+    end
+
+    def friends_request
+    end
 end

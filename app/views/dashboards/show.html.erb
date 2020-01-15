@@ -3,7 +3,8 @@
 
 <% if user_signed_in? %>
   
-  <%= image_tag current_user.gravatar_url, :class => "gravatar" %>
+  <%= gravatar_for current_user %>
+  <%= link_to "Settings", edit_user_registration_path %>
    <li>
       <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
    </li>
