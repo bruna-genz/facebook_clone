@@ -2,7 +2,11 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="right-container">
-
+     <h1>
+        Connect with friends and the <br />
+        world around you on Facebook.
+      </h1>
+      <div id="connect-img"></div>
   </div>
 
   <div class="left-container">
@@ -28,27 +32,36 @@
       <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %>
-      <%= f.password_field :password, placeholder: "new-password" %>
+      <%= f.password_field :password, placeholder: "Password" %>
     </div>
 
     <div class="field">
-      <%= f.password_field :password_confirmation, placeholder: "new-password" %>
+      <%= f.password_field :password_confirmation, placeholder: "Password confirmation" %>
     </div>
 
-
-    <div class="field">
-      <%= f.label :birthday %><br />
+    <div class="field" id="birthday">
+      <%= f.label :birthday, class: "sub-label" %><br />
       <%= f.date_field :birthday %>
     </div>
 
-    <div class="field">
-      <%= f.label :gender %><br />
-      <%= f.select(:gender, options_for_select([['male', 1], ['female', 2], ['other', 3]], 3)) %>
+    <h3 class="sub-label">Gender</h3>
+    <div class="field" id="radio-btn">
+      <%= f.radio_button :gender, "male", :checked => false %>
+      <%= f.label :gender, 'Male' %>
+
+      <%= f.radio_button :gender, "female", :checked => false %>
+      <%= f.label :gender, 'Female' %>
+
+      <%= f.radio_button :gender, "other", :checked => false %>
+      <%= f.label :gender, 'Other' %>
     </div>
 
-    
+    <div id="info">
+      <p>By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.</p>
+    <div>
+
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", id:"sign-up-btn" %>
     </div>
   </div>
 <% end %>

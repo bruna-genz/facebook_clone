@@ -24,8 +24,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.select(:gender, options_for_select([['male', 1], ['female', 2], ['other', 3]], 3)) %>
+    <%= f.label :gender, 'Male' %><br />
+    <%= f.radio_button :gender %>
+  
+    <%= f.label :gender, 'Female' %><br />
+    <%= f.radio_button :gender %>
+  
+    <%= f.label :gender, 'Other' %><br />
+    <%= f.radio_button :gender %>
   </div>
 
   <div class="field">
