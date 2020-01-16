@@ -5,7 +5,7 @@
     display: flex;
     background-color: #3B5998;
     color: white;
-    font-family: 'Facebolf';
+    
     justify-content: space-around;
     padding: 0 13em;
     .form-right {
@@ -38,5 +38,42 @@
         &:hover {
             background-color: #3B5998;
         }
+    }
+}
+
+.sign-up-form {
+    display: flex;
+    margin-top: 5em;
+    justify-content: space-around;
+    padding: 0 13em;
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+    .left-container {
+        input {
+            background-color: rgb(249, 251, 255);
+            border-radius: 5px;
+            height: 2.5em;
+            width: 25em;
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 36px;
+            
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 1em;
+        }
+
+        .names {
+            display: flex;
+            input {
+                margin-right: 1em;
+                width: 12em;
+                
+                
+            }
+        }
+
+
     }
 }
