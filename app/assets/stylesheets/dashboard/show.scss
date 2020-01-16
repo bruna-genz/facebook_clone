@@ -9,8 +9,13 @@
 
 .navbar {
     background-color: $facebook-blue;
-    #logo {
-        width: 15px;
-        height: 15px;
+    height: 42px;
+    
+  
+    .fa {
+       font-size: 40px;
+        color: white;
     }
+    
+
 }
