@@ -1,0 +1,16 @@
+@import "bulma";
+@import "font-awesome";
+@import "../variables.scss";
+
+.gravatar {
+    height: 30px;
+    width: auto;
+  }
+
+.navbar {
+    background-color: $facebook-blue;
+    #logo {
+        width: 15px;
+        height: 15px;
+    }
+}

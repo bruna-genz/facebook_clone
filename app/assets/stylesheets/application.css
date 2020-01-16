@@ -14,7 +14,9 @@
  *= require_self
  */
 
- 
+ /*
+ *= require font-awesome
+ */
  
  *{
     margin: 0;
@@ -24,4 +26,9 @@
  }
  body {
    background-color: #E9EBEE;
+
+ }
+
+ html {
+  background-color: #E9EBEE;
  }
