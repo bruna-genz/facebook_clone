@@ -56,3 +56,28 @@
         }
     }
 }
+
+.timeline {
+    
+    li {
+        border: solid 1px rgb(209, 213, 216);
+        background-color: white;
+        margin-top: 5px;
+        padding: 8px 0 0 8px;
+        
+        .creator {
+            display: flex;
+            .gravatar {
+                padding-right: 3px;
+            }
+            
+            color: #3B5998;
+            font-weight: bold;
+        }
+        #time {
+            font-size: 12px;
+            color: rgb(90, 92, 94);
+
+        }  
+    }
+}

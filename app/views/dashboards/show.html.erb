@@ -24,6 +24,28 @@
             <%= f.submit "Create post"%>
          </div>
       <% end %>
+
+      <div class="timeline">
+         <% @posts.each do | post |%>
+            <ul>
+               <li>
+            
+                  <div class= "creator">
+                     <%= gravatar_for post.creator %>
+                     <%= post.creator.first_name %> 
+                     <%= post.creator.last_name %>
+                  </div>
+                  <div id="time">
+                     <%= "#{time_ago_in_words(post.created_at)} ago" %>
+                  </div>
+                     <div class= "content">
+                     <%= post.content %>
+                  </div>
+                  <div class="IMPORTANT DO LIKE COMMENTS FORM"></div> 
+               </li>
+            </ul>
+         <% end %>
+      </div>
    </div>
 
    <div class="column column-3">Auto</div>
