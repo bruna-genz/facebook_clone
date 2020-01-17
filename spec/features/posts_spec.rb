@@ -18,7 +18,7 @@ RSpec.feature "Posts", type: :feature do
     scenario 'Should be successful' do
       visit root_path
       within('form') do
-        fill_in 'What are you thinking?', with: 'This is a post'
+        fill_in 'Create post', with: 'This is a post'
       end
       click_button 'Create post'
       expect(page).to have_content('Post created')

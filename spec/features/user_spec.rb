@@ -10,7 +10,7 @@ RSpec.feature "Users", type: :feature do
           fill_in 'Last name', with: 'User'
           fill_in 'Email', with: 'user@aa.com'
           fill_in 'Birthday', with: Time.now - 18.years
-          select 'other', from: 'Gender'
+          choose('Other')
           fill_in 'Password', with: '123456'
           fill_in 'Password confirmation', with: '123456'
         end
@@ -24,7 +24,7 @@ RSpec.feature "Users", type: :feature do
         fill_in 'Last name', with: 'User'
         fill_in 'Email', with: 'user@aa.com'
         fill_in 'Birthday', with: Time.now - 18.years
-        select 'other', from: 'Gender'
+        choose('Other')
         fill_in 'Password', with: '123456'
         fill_in 'Password confirmation', with: '123456'
       end
