@@ -10,7 +10,7 @@ RSpec.feature "Users", type: :feature do
           fill_in 'Last name', with: 'User'
           fill_in 'Email', with: 'user@aa.com'
           fill_in 'Birthday', with: Time.now - 18.years
-          choose('Other')
+          
           fill_in 'Password', with: '123456'
           fill_in 'Password confirmation', with: '123456'
         end
@@ -24,7 +24,7 @@ RSpec.feature "Users", type: :feature do
         fill_in 'Last name', with: 'User'
         fill_in 'Email', with: 'user@aa.com'
         fill_in 'Birthday', with: Time.now - 18.years
-        choose('Other')
+        
         fill_in 'Password', with: '123456'
         fill_in 'Password confirmation', with: '123456'
       end
@@ -47,8 +47,7 @@ RSpec.feature "Users", type: :feature do
     end
 
     scenario 'Should be successful' do
-      expect(page).to have_link('Settings', href: '/users/edit')
-      visit edit_user_registration_path
+      click_link('Settings', visible: false)
       expect(page).to have_content('Edit User')
       within('.edit_user_form') do
         fill_in 'Last name', with: 'User'
