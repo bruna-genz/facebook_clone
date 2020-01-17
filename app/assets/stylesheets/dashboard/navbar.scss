@@ -6,7 +6,7 @@
     #navbar-left {
         align-items: center;
         margin-left: 25%;
-        @media (min-width: 1263px) {
+        @media (max-width: 1500px) {
             margin-left: 8%;
         }
     }

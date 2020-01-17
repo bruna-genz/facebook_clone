@@ -1,22 +1,28 @@
 <div class="columns">
    
-      <div class="column column-1" >Auto</div>
+      <div class="column column-1" >
+         <%= gravatar_for current_user %>
+         <%= current_user.first_name %>
+      </div>
   
 
+   <div class="column is-one-third">
 
-
-
-   <div class="column is-half">
-      <%= gravatar_for current_user %>
       <%= form_for @post, :url => { :controller => "posts", :action => "create" }, :html => {:method => :post} do |f| %>
 
          <%= render 'dashboards/partials/errors' %>
 
-         <%= f.label :content, 'What are you thinking?'%> <br/>
-         <%= f.text_area :content, size: '65x5', placeholder: 'Post something...' %><br/>
+         <div class="label">
+            <%= f.label :content, 'Create post'%>
+         </div>
+         <div class="post-form-box">
+            <%= gravatar_for current_user %>
+            <%= f.text_area :content, placeholder: "What's in your mind, #{current_user.first_name}.", class: 'post-text' %><br/>
+         </div>
 
-         <%= f.submit "Create post"%>
-
+         <div class="post-btn">
+            <%= f.submit "Create post"%>
+         </div>
       <% end %>
    </div>
 

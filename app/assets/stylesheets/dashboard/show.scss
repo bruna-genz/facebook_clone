@@ -5,9 +5,54 @@
 .gravatar {
     height: 30px;
     width: auto;
+    border-radius: 50%;
 }
 .column-1, .column-3 {
     justify-content: center;
     padding: 5em;
     background-color: red;
+}
+
+.new_post {
+    margin-top: 1em;
+    border: solid 1px rgb(209, 213, 216);
+    .label {
+        background-color: #F5F6F7;
+        border-bottom: solid 1px rgb(209, 213, 216);
+        margin: 0;
+        padding: 5px;
+        font-size: 15px;
+        color: rgb(90, 92, 94);
+    }
+    .post-form-box {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        .gravatar {
+            margin-left: 10px;
+            height: 45px;
+        }
+        .post-text {
+            width: 90%;
+            height: 70px;
+            resize: none;
+            border: none;
+            padding: 4% 10px;           
+        }
+    }
+    .post-btn {
+        display: flex;
+        justify-content: center;
+        background: white;
+        border-top: solid 1px rgb(209, 213, 216);
+        input {
+            width: 90%;
+            background-color: #3B5998;
+            color: white;
+            border: none;
+            padding: .5em 0;
+            margin: .5em 0;
+            border-radius: 3px;
+        }
+    }
 }
