@@ -27,5 +27,13 @@ RSpec.describe Post, type: :model do
             post = Post.reflect_on_association(:creator)
             expect(post.macro).to eq(:belongs_to)
         end
+        it 'post has many comments' do
+            post = Post.reflect_on_association(:comments)
+            expect(post.macro).to eq(:has_many)
+        end
+        it 'post has many likes' do
+            post = Post.reflect_on_association(:likes)
+            expect(post.macro).to eq(:has_many)
+        end
     end
 end
