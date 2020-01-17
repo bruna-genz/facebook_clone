@@ -1,11 +1,11 @@
 module ApplicationHelper
   def flash_class(level)
-    if level == 'success'
-      'ui green message'
-    elsif level == 'error'
-      'ui red message'
+    if level == 'success'||  level == 'notice'
+      'is-success'
+    elsif level == 'alert'
+      'is-danger'
     else
-      'ui blue message'
+      'is-info'
     end
   end
 

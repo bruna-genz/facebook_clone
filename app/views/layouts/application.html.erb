@@ -18,12 +18,14 @@
     
     <% flash.each do |key, value| %>
       <div class="flash">
-        <div class="<%= flash_class(key) %> closable">
+        <div class="<%= flash_class(key) %> notification">
         <i class="close icon"></i>
         <%= value %>
         </div>
       </div>
     <% end %>
+
     <%= yield %>
+
   </body>
 </html>

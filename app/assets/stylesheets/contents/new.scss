@@ -151,6 +151,22 @@
     }
 }
 
+.signup-errors {
+    padding-top: 2em;
+    flex-direction: column !important;
+    a {
+        background-color: rgb(89, 117, 177);
+        border: solid 1px  rgb(42, 56, 85);
+        color: white;
+        padding: 0.3em;
+        font-weight: bold;
+        margin: 1.4em 0;
+        &:hover {
+            background-color: #3B5998;
+        }
+    }
+}
+
 /*
 .footer-lan {
     width: 100%;
