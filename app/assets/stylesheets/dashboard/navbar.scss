@@ -6,6 +6,9 @@
     #navbar-left {
         align-items: center;
         margin-left: 25%;
+        @media (min-width: 1263px) {
+            margin-left: 8%;
+        }
     }
     .has-addons {
         display: flex;

@@ -5,4 +5,9 @@
 .gravatar {
     height: 30px;
     width: auto;
-  }
+}
+.column-1, .column-3 {
+    justify-content: center;
+    padding: 5em;
+    background-color: red;
+}

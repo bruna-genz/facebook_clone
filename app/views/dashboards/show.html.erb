@@ -1,27 +1,26 @@
-<h2>Hello <i><%= current_user.email %></i></h2>
-
-
-<% if user_signed_in? %>
-  
-  <%= gravatar_for current_user %>
-  <%= link_to "Settings", edit_user_registration_path %>
-   <li>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-   </li>
+<div class="columns">
    
-<% else %>
-   <li>
-      <%= link_to('Login', new_user_session_path)  %>
-   </li>
-<% end %>
-
-<%= form_for @post, :url => { :controller => "posts", :action => "create" }, :html => {:method => :post} do |f| %>
-
-  <%= render 'dashboards/partials/errors' %>
+      <div class="column column-1" >Auto</div>
   
-  <%= f.label :content, 'What are you thinking?'%> <br/>
-  <%= f.text_area :content, size: '40x20', placeholder: 'Post something...' %><br/>
 
-  <%= f.submit "Create post"%>
 
-<% end %>
+
+
+   <div class="column is-half">
+      <%= gravatar_for current_user %>
+      <%= form_for @post, :url => { :controller => "posts", :action => "create" }, :html => {:method => :post} do |f| %>
+
+         <%= render 'dashboards/partials/errors' %>
+
+         <%= f.label :content, 'What are you thinking?'%> <br/>
+         <%= f.text_area :content, size: '65x5', placeholder: 'Post something...' %><br/>
+
+         <%= f.submit "Create post"%>
+
+      <% end %>
+   </div>
+
+   <div class="column column-3">Auto</div>
+
+
+</div>
