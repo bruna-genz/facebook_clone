@@ -12,5 +12,7 @@ class DashboardsController < ApplicationController
     def friends_request
     end
 
-
+    def find_friends
+        @users = User.all 
+    end
 end
