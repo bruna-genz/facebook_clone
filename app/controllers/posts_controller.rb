@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     end
 
     def index
+        redirect_to root_path
     end
 
     def destroy
