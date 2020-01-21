@@ -47,7 +47,7 @@ RSpec.feature "Users", type: :feature do
     end
 
     scenario 'Should be successful' do
-      click_link('Settings', visible: false)
+      visit edit_user_registration_path
       expect(page).to have_content('Edit User')
       within('.edit_user_form') do
         fill_in 'Last name', with: 'User'

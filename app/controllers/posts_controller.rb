@@ -13,7 +13,7 @@ class PostsController < ApplicationController
             flash[:success] = "Post created"
             redirect_to root_path
         else
-            render :template => 'dashboards/show'          
+            render :template => 'posts/index'          
         end
     end
 
