@@ -1,6 +1,6 @@
 Milestone 4:
 
-- Association for Comments;
+
 - Integration tests for Likes and Comments;
 - Generate controllers and actions;
 - Comment new form;
@@ -11,7 +11,5 @@ Milestone 4:
 
 Pages:
 
-root - posts#index
-profile - users#show
-fiend friends - users#index
+
 
