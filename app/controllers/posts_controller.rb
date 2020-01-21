@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 
     def create
         @post = current_user.posts.build(posts_params)
+        @posts = Post.all.order(created_at: :desc)
         if @post.valid?
             @post.save
             flash[:success] = "Post created"

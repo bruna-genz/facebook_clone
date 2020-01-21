@@ -1,7 +1,5 @@
 Milestone 4:
 
-
-- Integration tests for Likes and Comments;
 - Generate controllers and actions;
 - Comment new form;
 - In like controller, allow user to like just one time in each thing;

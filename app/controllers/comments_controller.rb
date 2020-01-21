@@ -8,15 +8,18 @@ class CommentsController < ApplicationController
   end
   
   def create
-    @comment = current_user.comments.build()
+    @comment = current_user.comments.build(comments_params)
     if comment.valid?
+      @comment.save
+      flash[:success] = "Comment created"
+      redirect_to root_path
     else
+      render :template => 'posts/index'
     end
   end
 
-  
-
   def destroy
+    @comment.destroy
   end
 
   private 
