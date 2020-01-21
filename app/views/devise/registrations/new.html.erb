@@ -1,0 +1,11 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "signup-errors new_user" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <%= link_to new_content_path do %>
+      <p> Go back </p>
+  <% end %>
+<% end %>
+
+
+
+

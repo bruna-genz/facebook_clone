@@ -1,0 +1,54 @@
+@import "../variables.scss";
+
+.navbar {
+    background-color: $facebook-blue !important;
+    height: 42px;
+    #navbar-left {
+        align-items: center;
+        margin-left: 25%;
+        @media (max-width: 1500px) {
+            margin-left: 8%;
+        }
+    }
+    .has-addons {
+        display: flex;
+        align-items: center;
+        margin: 0 2em 0 0.5em !important;
+    }
+    .fa {
+       font-size: 30px;
+        color: white;
+    }    
+    .navbar-link {
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+        &:hover {
+            background-color: rgba(28, 39, 63, 0.753);
+            color: white;
+        }
+        i {
+            color:rgb(28, 39, 63);
+            font-size: 17px;
+        }
+    }
+    .messenger {
+        width: 20px;
+        height: 20px;
+        fill: rgb(28, 39, 63);
+    }
+    .control {
+        input {
+            width: 25em;
+            height: 1.5em;
+        }
+        .button {
+            height: 1.5em;
+        }
+    }
+    .gravatar {
+        border-radius: 50%;
+        margin-right: .5em;
+    }
+
+}

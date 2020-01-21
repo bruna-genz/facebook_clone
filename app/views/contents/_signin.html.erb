@@ -1,0 +1,29 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-right">
+      <h1 class="title">facebook clone</h1>
+    </div>
+    
+    <div class="form-right">
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      
+
+      <% if devise_mapping.rememberable? -%>
+          <div class="field" id="remember-me">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+      <% end -%>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Log in", id: "sign-in-btn" %>
+      </div>
+    </div>
+<% end %>

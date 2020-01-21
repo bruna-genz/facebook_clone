@@ -1,0 +1,53 @@
+<div class="columns">
+   
+      <div class="column column-1" >
+         <%= gravatar_for current_user %>
+         <%= current_user.first_name %>
+         <%= current_user.last_name %>
+      </div>
+  
+
+   <div class="column is-one-third">
+
+      <%= form_for @post do |f| %>
+
+         <%= render 'layouts/partials/errors' %>
+
+         <div class="label">
+            <%= f.label :content, 'Create post'%>
+         </div>
+         <div class="post-form-box">
+            <%= gravatar_for current_user %>
+            <%= f.text_area :content, placeholder: "What's in your mind, #{current_user.first_name}.", class: 'post-text' %><br/>
+         </div>
+
+         <div class="post-btn">
+            <%= f.submit "Create post"%>
+         </div>
+      <% end %>
+
+      <div class="timeline">
+         <% @posts.each do | post |%>
+            <ul>
+               <li>
+            
+                  <div class= "creator">
+                     <%= gravatar_for post.creator %>
+                     <%= post.creator.first_name %> 
+                     <%= post.creator.last_name %>
+                  </div>
+                  <div id="time">
+                     <%= "#{time_ago_in_words(post.created_at)} ago" %>
+                  </div>
+                     <div class= "content">
+                     <%= post.content %>
+                  </div>
+                  <div class="IMPORTANT DO LIKE COMMENTS FORM"></div> 
+               </li>
+            </ul>
+         <% end %>
+      </div>
+   </div>
+
+   <div class="column column-3">Auto</div>
+</div>

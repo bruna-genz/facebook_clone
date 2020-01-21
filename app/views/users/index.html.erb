@@ -1,0 +1,18 @@
+<div class="timeline">
+    <% @users.each do | user |%>
+    <ul>
+        <% unless user == current_user %>
+            <li>
+                <div class= "creator">
+                    <%= gravatar_for user %>
+                    <%= user.first_name %> 
+                    <%= user.last_name %>
+                </div>
+                <%= link_to "#" do %>
+                    <p>Add friend</p>
+                <% end %>
+            </li>
+        <% end %>
+    </ul>
+    <% end %>
+</div>
