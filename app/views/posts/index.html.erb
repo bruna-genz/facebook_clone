@@ -8,7 +8,6 @@
   
 
    <div class="column is-one-third">
-
       <%= form_for @post do |f| %>
 
          <%= render 'layouts/partials/errors' %>
@@ -42,6 +41,9 @@
                      <div class= "content">
                      <%= post.content %>
                   </div>
+                  <div class="likes">
+                     <%= button_to 'Like', post_likes_path(post), method: :post %>
+                  <div>
                   <div class="IMPORTANT DO LIKE COMMENTS FORM"></div> 
                </li>
             </ul>

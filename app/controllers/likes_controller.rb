@@ -1,18 +1,36 @@
 class LikesController < ApplicationController
+  before_action :find_post
+  before_action :find_like, only: [:destroy]
+
   def new
     @like = Like.new
   end
   
   def create
-    @likes = current_user.likes.build
+    if liked?
+      destroy
+    else
+      @likes = @post.likes.build(liker_id: current_user.id)
+    end
+    redirect_to root_path
   end
 
   def destroy
+    @like.destroy
+    redirect_to root_path
   end
 
   private
 
-    def likes_params
-      params.require(:like).permit
+    def find_post
+      @post = Post.find(params[:post_id])
+    end
+
+    def find_like
+      @like = Like.find(params[:id])
+    end
+
+    def liked?
+      Like.where(liker_id: current_user.id, post_id: params[post_id]).exists?
     end
 end
