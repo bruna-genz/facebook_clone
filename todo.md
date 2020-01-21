@@ -8,3 +8,10 @@ Milestone 4:
 - Put likes on view;
 - Fix design of aside columns of dashboar show (user position sticky).
 
+
+Pages:
+
+root - posts#index
+profile - users#show
+fiend friends - users#index
+

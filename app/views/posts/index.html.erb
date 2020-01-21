@@ -9,9 +9,9 @@
 
    <div class="column is-one-third">
 
-      <%= form_for @post, :url => { :controller => "posts", :action => "create" }, :html => {:method => :post} do |f| %>
+      <%= form_for @post do |f| %>
 
-         <%= render 'dashboards/partials/errors' %>
+         <%= render 'layouts/partials/errors' %>
 
          <div class="label">
             <%= f.label :content, 'Create post'%>
@@ -50,6 +50,4 @@
    </div>
 
    <div class="column column-3">Auto</div>
-
-
 </div>
