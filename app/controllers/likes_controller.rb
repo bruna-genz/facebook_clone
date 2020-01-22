@@ -10,7 +10,7 @@ class LikesController < ApplicationController
     if liked?
       destroy
     else
-      @likes = @post.likes.build(liker_id: current_user.id)
+      @post.likes.create(liker_id: current_user.id)
     end
     redirect_to root_path
   end
@@ -27,10 +27,10 @@ class LikesController < ApplicationController
     end
 
     def find_like
-      @like = Like.find(params[:id])
+      @like = @post.likes.find(params[:id])
     end
 
     def liked?
-      Like.where(liker_id: current_user.id, post_id: params[post_id]).exists?
+      Like.where(liker_id: current_user.id, post_id: params[:post_id]).exists?
     end
 end

@@ -29,7 +29,6 @@
          <% @posts.each do | post |%>
             <ul>
                <li>
-            
                   <div class= "creator">
                      <%= gravatar_for post.creator %>
                      <%= post.creator.first_name %> 
@@ -42,7 +41,12 @@
                      <%= post.content %>
                   </div>
                   <div class="likes">
-                     <%= button_to 'Like', post_likes_path(post), method: :post %>
+                     <% find_like_id(post) %>
+                     <% if @like_id %>
+                        <%= button_to 'Dislike', post_like_path(post, @like_id), method: :delete %>
+                     <% else %>
+                        <%= button_to 'Like', post_likes_path(post), method: :post %>
+                     <% end %>
                   <div>
                   <div class="IMPORTANT DO LIKE COMMENTS FORM"></div> 
                </li>
