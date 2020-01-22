@@ -9,13 +9,13 @@ class CommentsController < ApplicationController
   
   def create
     @comment = current_user.comments.build(comments_params)
-    if comment.valid?
+    if @comment.valid?
       @comment.save
       flash[:success] = "Comment created"
-      redirect_to root_path
     else
-      render :template => 'posts/index'
+      flash[:danger] = "It was not possible to create this comment"
     end
+    redirect_to root_path
   end
 
   def destroy
@@ -24,8 +24,6 @@ class CommentsController < ApplicationController
 
   private 
       def comments_params
-        params.require(:comment).permit(:sub_content)
+        params.require(:comment).permit(:sub_content, :post_id)
       end
-
-
 end
