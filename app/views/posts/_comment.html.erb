@@ -5,5 +5,14 @@
         <%= f.hidden_field :post_id, :value => post.id %>
         <%= f.submit 'comment '%>
     <% end %>
+
+    <% find_comment(post).each do |comment|%>
+        <ul>
+            <li>
+                <%= comment.sub_content %>
+            </li>
+        </ul>
+    <%end%> 
+
 </div>
 

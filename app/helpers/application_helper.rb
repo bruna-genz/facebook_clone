@@ -33,4 +33,8 @@ module ApplicationHelper
       end
     end
   end
+
+  def find_comment(post)
+    @comments = post.comments
+  end
 end
