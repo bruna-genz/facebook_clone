@@ -43,10 +43,20 @@
                   <div class="likes">
                      <% find_like_id(post) %>
                      <% if @like_id %>
-                        <%= button_to 'Dislike', post_like_path(post, @like_id), method: :delete %>
+                        <%= button_to post_like_path(post, @like_id), method: :delete, class: "unlike" do %>
+                           <i class="fas fa-thumbs-up"></i>Like
+                        <%end%>
                      <% else %>
-                        <%= button_to 'Like', post_likes_path(post), method: :post %>
+                        <%= button_to post_likes_path(post), method: :post  do %>
+                           <i class="fas fa-thumbs-up"></i>Like
+                        <%end%>  
                      <% end %>
+                     <%= button_to "#" do%>
+                        <i class="far fa-comment"></i>Comment
+                     <%end%>  
+                     <%= button_to "#" do%>
+                        <i class="fas fa-share"></i>Share
+                     <%end%>  
                   <div>
                   <div class="IMPORTANT DO LIKE COMMENTS FORM"></div> 
                </li>

@@ -72,7 +72,7 @@
         border: solid 1px rgb(209, 213, 216);
         background-color: white;
         margin-top: 5px;
-        padding: 8px 0 0 8px;
+        padding: 8px 8px 0 8px;
         
         .creator {
             display: flex;
@@ -89,4 +89,46 @@
 
         }  
     }
+
+    .likes {
+        display: flex;
+        border-top:1px solid gainsboro;
+        justify-content: space-around;
+        
+        input, button {
+            margin: 2px 0;
+            height: 2em;
+            width: 8em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: white;
+            color: rgb(155, 155, 155);
+            font-size: 12px;
+            text-align: center;
+            border: none;
+            &:hover {
+                background-color: rgb(219, 219, 219);
+                cursor: pointer;
+                border-radius: 1px;
+            }
+            i {
+                font-size: 17px;
+                margin-right: 4px;
+            }
+            
+        }
+        .unlike {
+            color: #4080FF;
+            font-weight: bold;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            i {
+                font-size: 17px;
+                margin-right: 4px;
+            }
+            
+
+        }
+    }   
+
 }
