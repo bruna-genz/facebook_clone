@@ -21,14 +21,15 @@ module ApplicationHelper
 
   def count_likes(post)
     if post.likes.any?
+      
       first_liker = post.likes.first.liker
       second_liker = post.likes.second.liker if post.likes.count > 1
       if post.likes.count == 1
         first_liker.first_name
       elsif post.likes.count == 2
-        second.liker.first_name
+        first_liker.first_name + " and " +second_liker.first_name
       else
-        first_liker.first_name + "," + second.liker.first_name + "and" + "#{post.likes.count}" + " #{(post.likes.count) == 1 ? 'Like' : 'Likes'}"
+        first_liker.first_name + ", " + second_liker.first_name + " and " + "#{post.likes.count - 2}" + " more liked this post."
       end
     end
   end
