@@ -1,0 +1,7 @@
+<%= form_for @comment, :url => { :controller => "comments", :action => "create" }, :html => {:method => :post} do |f| %>
+    <%= f.text_area :sub_content do%>
+        <%= f.submit 'comment '%>
+    <% end %>
+<% end %>
+
+

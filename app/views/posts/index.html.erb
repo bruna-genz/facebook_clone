@@ -29,45 +29,7 @@
          <% @posts.each do | post |%>
             <ul>
                <li>
-                  <div class= "creator">
-                     <%= gravatar_for post.creator %>
-                     <%= post.creator.first_name %> 
-                     <%= post.creator.last_name %>
-                  </div>
-                  <div id="time">
-                     <%= "#{time_ago_in_words(post.created_at)} ago" %>
-                  </div>
-                     <div class= "content">
-                     <%= post.content %>
-                  </div>
-                  <% if post.likes.any?%>
-                     <div class="likers">
-                        
-                        <p>
-                           <i class="fas fa-thumbs-up"></i>
-                           <%= count_likes(post) %>
-                        </p>
-                     <div>
-                  <%end%>
-                  <div class="likes">
-                     <% find_like_id(post) %>
-                     <% if @like_id %>
-                        <%= button_to post_like_path(post, @like_id), method: :delete, class: "unlike" do %>
-                           <i class="fas fa-thumbs-up"></i>Like
-                        <%end%>
-                     <% else %>
-                        <%= button_to post_likes_path(post), method: :post  do %>
-                           <i class="fas fa-thumbs-up"></i>Like
-                        <%end%>  
-                     <% end %>
-                     <%= button_to "#" do%>
-                        <i class="far fa-comment"></i>Comment
-                     <%end%>  
-                     <%= button_to "#" do%>
-                        <i class="fas fa-share"></i>Share
-                     <%end%>  
-                  <div>
-                  <div class="IMPORTANT DO LIKE COMMENTS FORM"></div> 
+                  <%= render post %>
                </li>
             </ul>
          <% end %>
