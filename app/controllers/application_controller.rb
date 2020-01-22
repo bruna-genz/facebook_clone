@@ -9,12 +9,4 @@ class ApplicationController < ActionController::Base
         devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birthday, :gender])
         devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birthday, :gender])
     end
-
-    private
-    
-        #def authenticate_user!
-        #    unless user_signed_in?
-        #        redirect_to new_content_path
-        #    end
-        #end
 end

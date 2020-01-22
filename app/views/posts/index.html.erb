@@ -40,6 +40,9 @@
                      <div class= "content">
                      <%= post.content %>
                   </div>
+                  <div class="likers">
+                     <p><%= count_likes(post) %></p>
+                  <div>
                   <div class="likes">
                      <% find_like_id(post) %>
                      <% if @like_id %>
