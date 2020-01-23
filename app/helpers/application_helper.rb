@@ -37,4 +37,11 @@ module ApplicationHelper
   def find_comment(post)
     @comments = post.comments
   end
+
+  def count_comments(post)
+    "#{post.comments.count} comments"
+  end
+
 end
+
+

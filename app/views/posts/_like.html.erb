@@ -1,11 +1,14 @@
 <% if post.likes.any?%>
     <div class="likers">
     
-    <p>
-    <i class="fas fa-thumbs-up"></i>
-        <%= count_likes(post) %>
-    </p>
-    <div>
+        <p>
+        <i class="fas fa-thumbs-up"></i>
+            <%= count_likes(post) %>
+        </p>
+        <p id="count-comments">
+            <%= count_comments(post) %>
+        </p>
+    </div>
 <% end %>
 <div class="likes">
     <% find_like_id(post) %>

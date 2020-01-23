@@ -99,7 +99,10 @@
 /*           LIKES                   */
 
         .likers {
+            display: flex;
+            justify-content: space-between;
             p {
+                font-size: 14px;
                 i {
                     color: #4080FF;
                 }
@@ -147,8 +150,8 @@
         }
     }   
 }
-
-/*           COMMENTS                   */
+ 
+/*          COMMENTS FORM                 */
 
 .comment-form {
     display: flex;
@@ -186,6 +189,35 @@
                 cursor: pointer;
                 background-color: #4080FF;
                 color: white;
+            }
+        }
+    }
+}
+/*          COMMENTS               */
+
+.comments-feed {
+    li {
+        display: flex;
+        border: none;
+        margin-bottom: 10px;
+        .comment {
+            background-color: #F2F3F5;
+            border-radius: 10px;
+            width: 100%;
+            padding-left: 5px;
+            margin-left: 5px;
+            .full-name {
+                display: flex;
+                color:  #3B5998;
+                
+                p {
+                    color: black;
+                    margin-left: 5px;
+                }
+            }
+
+            .links {
+                color:  #3B5998;
             }
         }
     }
