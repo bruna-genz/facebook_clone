@@ -1,21 +1,20 @@
 require 'rails_helper'
 
-RSpec.feature "Users", type: :feature do
+RSpec.feature 'Users', type: :feature do
   context 'create user' do
-    
     scenario 'Should be successful' do
-        visit root_path
-        within('.sign-up-form') do
-          fill_in 'First name', with: 'User'
-          fill_in 'Last name', with: 'User'
-          fill_in 'Email', with: 'user@aa.com'
-          fill_in 'Birthday', with: Time.now - 18.years
-          
-          fill_in 'Password', with: '123456'
-          fill_in 'Password confirmation', with: '123456'
-        end
-        click_button 'Sign up'
-        expect(page).to have_content('Welcome! You have signed up successfully.')
+      visit root_path
+      within('.sign-up-form') do
+        fill_in 'First name', with: 'User'
+        fill_in 'Last name', with: 'User'
+        fill_in 'Email', with: 'user@aa.com'
+        fill_in 'Birthday', with: Time.now - 18.years
+
+        fill_in 'Password', with: '123456'
+        fill_in 'Password confirmation', with: '123456'
+      end
+      click_button 'Sign up'
+      expect(page).to have_content('Welcome! You have signed up successfully.')
     end
 
     scenario 'Should fail' do
@@ -24,7 +23,7 @@ RSpec.feature "Users", type: :feature do
         fill_in 'Last name', with: 'User'
         fill_in 'Email', with: 'user@aa.com'
         fill_in 'Birthday', with: Time.now - 18.years
-        
+
         fill_in 'Password', with: '123456'
         fill_in 'Password confirmation', with: '123456'
       end
@@ -32,7 +31,7 @@ RSpec.feature "Users", type: :feature do
       expect(page).to have_content('First name can\'t be blank')
     end
   end
-  
+
   context 'edit current user' do
     subject { User.new(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com', password: '123456', password_confirmation: '123456', birthday: Time.now - 18.years, gender: 'male') }
     before { subject.save }

@@ -5,7 +5,7 @@ class LikesController < ApplicationController
   def new
     @like = Like.new
   end
-  
+
   def create
     if liked?
       destroy
@@ -22,15 +22,15 @@ class LikesController < ApplicationController
 
   private
 
-    def find_post
-      @post = Post.find(params[:post_id])
-    end
+  def find_post
+    @post = Post.find(params[:post_id])
+  end
 
-    def find_like
-      @like = @post.likes.find(params[:id])
-    end
+  def find_like
+    @like = @post.likes.find(params[:id])
+  end
 
-    def liked?
-      Like.where(liker_id: current_user.id, post_id: params[:post_id]).exists?
-    end
+  def liked?
+    Like.where(liker_id: current_user.id, post_id: params[:post_id]).exists?
+  end
 end
