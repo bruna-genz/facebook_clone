@@ -22,6 +22,8 @@
     }
 }
 
+/*           POST FORM                   */
+
 .new_post {
     margin-top: 1em;
     border: solid 1px rgb(209, 213, 216);
@@ -46,7 +48,10 @@
             height: 70px;
             resize: none;
             border: none;
-            padding: 4% 10px;           
+            padding: 4% 10px;   
+            &:focus {
+                outline: none;
+                }        
         }
     }
     .post-btn {
@@ -65,6 +70,8 @@
         }
     }
 }
+
+/*           TIMELINE                   */
 
 .timeline {
     
@@ -88,6 +95,8 @@
             color: rgb(90, 92, 94);
 
         }  
+
+/*           LIKES                   */
 
         .likers {
             p {
@@ -135,9 +144,49 @@
                 font-size: 17px;
                 margin-right: 4px;
             }
-            
-
         }
     }   
+}
 
+/*           COMMENTS                   */
+
+.comment-form {
+    display: flex;
+    margin: 5px;
+    border-top:1px solid gainsboro;
+    padding-top: 10px;    
+    form {
+        background-color: #F2F3F5;
+        border: solid 1px rgb(219, 219, 219);
+        border-radius: 20px;
+        width: 100%;
+        margin-left: 5px;
+        display: flex;
+        padding: 3px 0;
+        justify-content: space-between;
+        textarea {
+            background-color: #F2F3F5;
+            border: none;
+            resize: none;
+            margin: 8px 0 0 13px;
+            height: 1.5em;
+            width: 90%;
+            &:focus {
+                outline: none;
+                }
+        }
+        button {
+            background-color: #F2F3F5;
+            border: solid 1px rgb(172, 169, 169);
+            border-radius: 50%;
+            padding: 5px 7px;
+            margin-right: 10px;
+            color: rgb(172, 169, 169);
+            &:hover {
+                cursor: pointer;
+                background-color: #4080FF;
+                color: white;
+            }
+        }
+    }
 }
