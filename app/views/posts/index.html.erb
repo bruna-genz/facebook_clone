@@ -1,11 +1,6 @@
 <div class="columns">
    
-      <div class="column column-1" >
-         <%= gravatar_for current_user %>
-         <%= current_user.first_name %>
-         <%= current_user.last_name %>
-      </div>
-  
+   <%= render 'aside'%>  
 
    <div class="column is-one-third">
       <%= form_for @post do |f| %>
@@ -36,5 +31,18 @@
       </div>
    </div>
 
-   <div class="column column-3">Auto</div>
+   <div class="column column-3">
+      <div id="white-bg">
+         English (US) · Français (Canada) · <br /> 
+         Español · Português (Brasil) · Deutsch
+         <div>
+            +
+         </div>
+      </div>
+      <div>
+         Privacy · Terms · Advertising · Ad Choices · <br />
+         Cookies · More <br />
+         Facebook © 2020
+      <div>
+   </div>
 </div>

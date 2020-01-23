@@ -27,13 +27,10 @@ RSpec.describe Comment, type: :model do
             comment = Comment.reflect_on_association(:commenter)
             expect(comment.macro).to eq(:belongs_to)
         end
+        
         it 'comment belongs to post' do
           comment = Comment.reflect_on_association(:post)
           expect(comment.macro).to eq(:belongs_to)
         end
-        it 'comment has many likes' do
-            comment = Comment.reflect_on_association(:likes)
-            expect(comment.macro).to eq(:has_many)
-          end
     end
 end

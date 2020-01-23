@@ -16,9 +16,49 @@
     padding-left: 20%;
     padding-top: 2em;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    font-size: 15px;
     .gravatar {
+        width: 20px;
+        height: 20px;
         margin-right: 5px;
+    }
+    .aside {
+        margin-left: 40%;
+        margin-bottom: 10px;
+        padding: 3px;
+        &:hover {
+            background-color: #F5F6F7;
+            border: 1px solid rgb(155, 155, 155);
+        }
+        a {
+            color: black;
+        }
+    }
+    .aside-links {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40%;
+        justify-content: baseline;
+        img {
+            width: 15px;
+            height: 15px;
+        }
+        a {
+            color: black;
+            padding: 3px;
+            &:hover {
+                background-color: #F5F6F7;
+                border: 1px solid rgb(155, 155, 155);
+            }
+        }
+        p {
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(124, 128, 131);
+        }
     }
 }
 

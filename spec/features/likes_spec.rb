@@ -5,9 +5,6 @@ RSpec.feature "Likes", type: :feature do
   subject { User.new(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com', password: '123456', password_confirmation: '123456', birthday: Time.now - 18.years, gender: 'male') }
   before { subject.save }
 
-  subject { Post.new(content: 'Hello World!', creator_id: 1) }
-  before { subject.save }
-
   context 'like post' do
     before(:each) do
       visit new_user_session_path
@@ -20,8 +17,12 @@ RSpec.feature "Likes", type: :feature do
 
     scenario 'Should be successful' do
       visit root_path
-      click_link "Like"
-      expect('#liker-name').to have_content('You')
+      within('form') do
+        fill_in 'Create post', with: 'This is a post'
+      end
+      click_button 'Create post'
+      find('.like-btn').click
+      find("#liker-name").should have_content("John")
     end
   end
 end

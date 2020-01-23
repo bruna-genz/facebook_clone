@@ -1,9 +1,9 @@
 <div class="comment-form">
     <%= gravatar_for current_user %>
-    <%= form_for @comment, :url => { :controller => "comments", :action => "create" }, :html => {:method => :get} do |f| %>
+    <%= form_for @comment, :url => { :controller => "comments", :action => "create" }, :html => {:method => :get, :class => 'new-comment'} do |f| %>
         <%= f.text_area :sub_content, placeholder: "Write a comment..." %>
         <%= f.hidden_field :post_id, :value => post.id %>
-        <%= f.button do %>
+        <%= f.button :class => 'comment-btn' do %>
             <i class="far fa-paper-plane"></i>
         <% end %>
     <% end %>
@@ -17,7 +17,7 @@
                     <div class="full-name" >
                         <%= comment.commenter.first_name%>
                         <%= comment.commenter.last_name %>
-                        <p><%= comment.sub_content %></p>
+                        <p id="sub-content"><%= comment.sub_content %></p>
                     </div>                    
                 </div>
             </li>

@@ -1,8 +1,8 @@
 <% if post.likes.any?%>
     <div class="likers">
     
-        <p>
-        <i class="fas fa-thumbs-up"></i>
+        <p id="liker-name">
+            <i class="fas fa-thumbs-up"></i>
             <%= count_likes(post) %>
         </p>
         <p id="count-comments">
@@ -17,7 +17,7 @@
             <i class="fas fa-thumbs-up"></i>Like
         <% end %>
     <% else %>
-        <%= button_to post_likes_path(post), method: :post  do %>
+        <%= button_to post_likes_path(post), method: :post, class:"like-btn"  do %>
             <i class="fas fa-thumbs-up"></i>Like
         <% end %>  
     <% end %>

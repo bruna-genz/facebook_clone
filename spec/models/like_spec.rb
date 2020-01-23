@@ -8,12 +8,9 @@ RSpec.describe Like, type: :model do
       like = Like.reflect_on_association(:post)
       expect(like.macro).to eq(:belongs_to)
     end
-    it 'like belongs to comments' do
-      like = Like.reflect_on_association(:comment)
-      expect(like.macro).to eq(:belongs_to)
-    end
+   
     it 'like belongs to user' do
-      like = Like.reflect_on_association(:user)
+      like = Like.reflect_on_association(:liker)
       expect(like.macro).to eq(:belongs_to)
     end
   end
