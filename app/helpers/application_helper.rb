@@ -1,6 +1,6 @@
 module ApplicationHelper
   def flash_class(level)
-    if level == 'success' 
+    if level == 'success'
       'is-success'
     elsif level == 'notice'
       'is-success'
@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def count_likes(post)
-    unless !post.likes.any?
+    unless post.likes.none?
       first_liker = post.likes.first.liker
       second_liker = post.likes.second.liker if post.likes.count > 1
       if post.likes.count == 1
@@ -30,7 +30,7 @@ module ApplicationHelper
       elsif post.likes.count == 2
         first_liker.first_name + ' and ' + second_liker.first_name
       else
-        first_liker.first_name + ', ' + second_liker.first_name + ' and ' 
+        first_liker.first_name + ', ' + second_liker.first_name + ' and '
         + (post.likes.count - 2).to_s + ' more liked this post.'
       end
     end
