@@ -7,7 +7,6 @@ class PostsController < ApplicationController
 
     def create
         @post = current_user.posts.build(posts_params)
-        @posts = Post.all.order(created_at: :desc)
         if @post.valid?
             @post.save
             flash[:success] = "Post created"
@@ -26,7 +25,7 @@ class PostsController < ApplicationController
 
     def index
         @post = Post.new
-        @posts = Post.all.order(created_at: :desc)
+        @posts = Post.all
         @comment = Comment.new
     end
 

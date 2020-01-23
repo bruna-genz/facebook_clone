@@ -196,10 +196,10 @@
 /*          COMMENTS               */
 
 .comments-feed {
+    padding-bottom: 10px;
     li {
         display: flex;
         border: none;
-        margin-bottom: 10px;
         .comment {
             background-color: #F2F3F5;
             border-radius: 10px;
@@ -220,5 +220,10 @@
                 color:  #3B5998;
             }
         }
+    }
+    #comment-links {
+        margin: 0;
+        padding: 0 0 0 50px;
+        font-size: 14px;
     }
 }

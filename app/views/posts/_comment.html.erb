@@ -18,13 +18,16 @@
                         <%= comment.commenter.first_name%>
                         <%= comment.commenter.last_name %>
                         <p><%= comment.sub_content %></p>
-                    </div>
-                    <div class="links">
-                        <%= link_to "Like", "#" %>
-                        <%= link_to "Reply", "#" %> 
-                        
-                    </div>
-                    
+                    </div>                    
+                </div>
+            </li>
+            <li id="comment-links">
+                <div class="links">
+                    <%= link_to "Like", "#" %>
+                    ·
+                    <%= link_to "Reply", "#" %> 
+                    ·
+                    <%= "#{time_ago_in_words(comment.created_at)} ago" %>
                 </div>
             </li>
         </ul>
