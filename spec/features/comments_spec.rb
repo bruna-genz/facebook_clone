@@ -1,9 +1,15 @@
 require 'rails_helper'
 
 RSpec.feature 'Comments', type: :feature do
-  subject { User.new(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com', password: '123456', password_confirmation: '123456', birthday: Time.now - 18.years, gender: 'male') }
+  subject { User.new(first_name: 'John', 
+                      last_name: 'Doe', 
+                      email: 'john.doe@example.com', 
+                      password: '123456', 
+                      password_confirmation: '123456', 
+                      birthday: Time.now - 18.years, 
+                      gender: 'male') }
   before { subject.save }
-
+  
   context 'comment post' do
     before(:each) do
       visit new_user_session_path
@@ -13,7 +19,7 @@ RSpec.feature 'Comments', type: :feature do
       end
       click_button 'Log in'
     end
-
+    
     scenario 'Should be a successful comment' do
       visit root_path
       within('form') do
@@ -26,7 +32,7 @@ RSpec.feature 'Comments', type: :feature do
       find('.comment-btn').click
       find('#sub-content').should have_content('Hi this is my first comment')
     end
-
+    
     scenario 'Should fail' do
       visit root_path
       within('form') do

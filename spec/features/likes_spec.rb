@@ -1,7 +1,13 @@
 require 'rails_helper'
 
 RSpec.feature 'Likes', type: :feature do
-  subject { User.new(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com', password: '123456', password_confirmation: '123456', birthday: Time.now - 18.years, gender: 'male') }
+  subject { User.new(first_name: 'John', 
+                     last_name: 'Doe', 
+                     email: 'john.doe@example.com', 
+                     password: '123456', 
+                     password_confirmation: '123456', 
+                     birthday: Time.now - 18.years, 
+                     gender: 'male') }
   before { subject.save }
 
   context 'like post' do
