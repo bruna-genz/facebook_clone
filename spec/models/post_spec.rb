@@ -22,10 +22,24 @@ RSpec.describe Post, type: :model do
   end
 
   # Associations' tests
-  context 'Associations tests' do
+  context 'Creator associations tests' do
     it 'Post has one creator' do
       post = Post.reflect_on_association(:creator)
       expect(post.macro).to eq(:belongs_to)
+    end
+  end
+
+  context 'Comments associations tests' do
+    it 'Post has many comments' do
+      post = Post.reflect_on_association(:comments)
+      expect(post.macro).to eq(:has_many)
+    end
+  end
+
+  context 'Likes associations tests' do
+    it 'Post has many likes' do
+      post = Post.reflect_on_association(:likes)
+      expect(post.macro).to eq(:has_many)
     end
   end
 end
