@@ -21,19 +21,20 @@ module ApplicationHelper
     @like_id = post.likes.find { |like| like.liker_id == current_user.id }
   end
 
-  def count_likes(post)
-    unless post.likes.none?
-      first_liker = post.likes.first.liker
-      second_liker = post.likes.second.liker if post.likes.count > 1
-      if post.likes.count == 1
-        first_liker.first_name
-      elsif post.likes.count == 2
-        first_liker.first_name + ' and ' + second_liker.first_name
-      else
-        first_liker.first_name + ', ' + second_liker.first_name + ' and '
-        + (post.likes.count - 2).to_s + ' more liked this post.'
-      end
+  def list_likers(post)
+    first_liker = post.likes.first.liker
+    second_liker = post.likes.second.liker if post.likes.count > 1
+    if post.likes.count == 1
+      first_liker.first_name
+    elsif post.likes.count == 2
+      first_liker.first_name + ' and ' + second_liker.first_name
+    else
+      "#{first_liker.first_name}, #{second_liker.first_name} and #{(post.likes.count - 2)} more liked this post."
     end
+  end
+
+  def count_likes(post)
+    list_likers(post) if post.likes.any?
   end
 
   def find_comment(post)
@@ -41,6 +42,6 @@ module ApplicationHelper
   end
 
   def count_comments(post)
-    "#{post.comments.count} comments"
+    "#{post.comments.count} comments" if post.comments.any?
   end
 end

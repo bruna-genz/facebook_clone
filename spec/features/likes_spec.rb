@@ -1,4 +1,9 @@
 require 'rails_helper'
+require 'support/test_helpers'
+
+RSpec.configure do |c|
+  c.include TestHelper
+end
 
 RSpec.feature 'Likes', type: :feature do
   subject do
@@ -14,12 +19,7 @@ RSpec.feature 'Likes', type: :feature do
 
   context 'like post' do
     before(:each) do
-      visit new_user_session_path
-      within('form') do
-        fill_in 'Email', with: 'john.doe@example.com'
-        fill_in 'Password', with: '123456'
-      end
-      click_button 'Log in'
+      login_user
     end
 
     scenario 'Should be successful' do

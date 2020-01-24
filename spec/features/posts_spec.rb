@@ -1,7 +1,14 @@
 require 'rails_helper'
+require 'support/test_helpers'
+
+RSpec.configure do |c|
+  c.include TestHelper
+end
 
 RSpec.feature 'Posts', type: :feature do
-  subject { User.new(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com', password: '123456', password_confirmation: '123456', birthday: Time.now - 18.years, gender: 'male') }
+  subject do
+    create_user
+  end
   before { subject.save }
 
   context 'create post' do
