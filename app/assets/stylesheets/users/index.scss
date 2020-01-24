@@ -1,15 +1,61 @@
 .requests {
     margin-left: 25%;
     width: 38%;
-
+    .friends-requests {
+        background-color: white;
+        margin: 2em 0;
+        p {
+            border-bottom: solid 1px rgb(209, 213, 216);
+            padding: 1em;
+        }
+    }
     .friends-suggestions {
         background-color: white;
-            p {
-                border-bottom: solid 1px rgb(209, 213, 216);
-            }
-            li {
-                border: none;
-                padding: 0 10px;
-            }
+        p {
+            border-bottom: solid 1px rgb(209, 213, 216);
+            padding: 1em;
+        }
     }
-}
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-bottom: solid 1px rgb(209, 213, 216);
+        padding: 10px 0;
+        margin: 0 15px;
+        .creator {
+            display: flex;
+            align-items: center;
+            .gravatar {
+                border-radius: 0;
+                width: 70px;
+                height: 70px;
+                margin-right: 5px;
+            }
+        }
+        button {
+            width: auto;
+            background-color: #3B5998;
+            color: white;
+            border: none;
+            padding: .5em;
+            margin: .5em 0;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        #friends-btn {
+            display: flex;
+            button {
+                margin-left: 3px;
+            }
+        }
+    }
+    p {
+        color: black;
+        font-weight: 600;
+        font-size: 15px;
+    }
+}   

@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   root to: 'posts#index'
   get 'users/show', as: 'profile'
   get 'users/index', as: 'find_friends'

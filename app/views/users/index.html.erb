@@ -1,6 +1,29 @@
 <div class="timeline requests">
     <div class="friends-requests">
+        <% if current_user.friends_requests.any? %>
+            <p>Respond to Your Friend Request</p>
+            <% current_user.friends_requests.each do | request |%>
+                <li>   
+                    <div class= "creator">
+                        <%= gravatar_for request %>
+                        <%= request.first_name %> 
+                        <%= request.last_name %>
+                    </div>
+                    <div id="friends-btn">
+                        <%= button_to "#" do %>
+                            Confirm
+                        <% end %>
+                        <%= button_to "#" do %>
+                            Delete request
+                        <% end %>
+                    </div>
+                </li>
+            <% end %>
+        <% else %>
+            <p>No New Friend Requests</p>
+        <% end %>
     </div>
+
     <div class="friends-suggestions">
         <p>People You May Know</p>
         <% @users.each do | user |%>
@@ -12,8 +35,8 @@
                         <%= user.first_name %> 
                         <%= user.last_name %>
                     </div>
-                    <%= link_to "#" do %>
-                        <p>Add friend</p>
+                    <%= button_to "#" do %>
+                        <i class="fas fa-user-plus"></i> Add friend
                     <% end %>
                 </li>
             <% end %>
