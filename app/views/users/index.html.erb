@@ -1,18 +1,23 @@
-<div class="timeline">
-    <% @users.each do | user |%>
-    <ul>
-        <% unless user == current_user %>
-            <li>
-                <div class= "creator">
-                    <%= gravatar_for user %>
-                    <%= user.first_name %> 
-                    <%= user.last_name %>
-                </div>
-                <%= link_to "#" do %>
-                    <p>Add friend</p>
-                <% end %>
-            </li>
+<div class="timeline requests">
+    <div class="friends-requests">
+    </div>
+    <div class="friends-suggestions">
+        <p>People You May Know</p>
+        <% @users.each do | user |%>
+        <ul>
+            <% unless user == current_user %>
+                <li>
+                    <div class= "creator">
+                        <%= gravatar_for user %>
+                        <%= user.first_name %> 
+                        <%= user.last_name %>
+                    </div>
+                    <%= link_to "#" do %>
+                        <p>Add friend</p>
+                    <% end %>
+                </li>
+            <% end %>
+        </ul>
         <% end %>
-    </ul>
-    <% end %>
+    </div>
 </div>

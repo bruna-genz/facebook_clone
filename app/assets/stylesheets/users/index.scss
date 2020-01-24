@@ -1,0 +1,15 @@
+.requests {
+    margin-left: 25%;
+    width: 38%;
+
+    .friends-suggestions {
+        background-color: white;
+            p {
+                border-bottom: solid 1px rgb(209, 213, 216);
+            }
+            li {
+                border: none;
+                padding: 0 10px;
+            }
+    }
+}
