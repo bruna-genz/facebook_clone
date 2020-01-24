@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
  
+  get 'friendship/new'
+  get 'friendship/create'
+  get 'friendship/index'
+  get 'friendship/destroy'
   get 'comments/index'
   get 'comments/create'
   get 'comments/new'
