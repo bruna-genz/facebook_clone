@@ -1,0 +1,30 @@
+<% if post.likes.any?%>
+    <div class="likers">
+    
+        <p id="liker-name">
+            <i class="fas fa-thumbs-up"></i>
+            <%= count_likes(post) %>
+        </p>
+        <p id="count-comments">
+            <%= count_comments(post) %>
+        </p>
+    </div>
+<% end %>
+<div class="likes">
+    <% find_like_id(post) %>
+    <% if @like_id %>
+        <%= button_to post_like_path(post, @like_id), method: :delete, class: "unlike" do %>
+            <i class="fas fa-thumbs-up"></i>Like
+        <% end %>
+    <% else %>
+        <%= button_to post_likes_path(post), method: :post, class:"like-btn"  do %>
+            <i class="fas fa-thumbs-up"></i>Like
+        <% end %>  
+    <% end %>
+    <%= button_to "#" do%>
+        <i class="far fa-comment"></i>Comment
+    <% end %>  
+    <%= button_to "#" do%>
+        <i class="fas fa-share"></i>Share
+    <% end %>  
+</div>

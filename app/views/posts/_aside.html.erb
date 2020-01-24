@@ -1,0 +1,45 @@
+<div class="column column-1" >
+    <div class="aside">
+        <%= link_to profile_path do %>
+            <%= gravatar_for current_user %>
+            <%= current_user.first_name %>
+            <%= current_user.last_name %>
+        <% end %>
+    </div>
+
+    <div class="aside-links">
+        <%= link_to "#" do %>
+            <%= image_tag("news.svg") %>
+            News feed
+        <% end %>
+        <%= link_to "#" do %>
+            <%= image_tag("messenger.svg") %>
+            Messenger
+        <% end %>
+        <%= link_to "#" do %>
+            <%= image_tag("watching-tv.svg") %>
+            Watch
+        <% end %>
+        <p>Explore</p>
+        <%= link_to "#" do %>
+            <%= image_tag("facebook-logo.svg") %>
+            Welcome
+        <% end %>
+        <%= link_to "#" do %>
+            <%= image_tag("friendship.svg") %>
+            Groups
+        <% end %>
+        <%= link_to "#" do %>
+            <%= image_tag("red-flag.svg") %>
+            Pages
+        <% end %>
+        <%= link_to "#" do %>
+            <%= image_tag("calendar.svg") %>
+            Events
+        <% end %>
+        <%= link_to "#" do %>
+            <%= image_tag("charity.svg") %>
+            Fundraisers
+        <% end %>
+    </div>
+</div>
