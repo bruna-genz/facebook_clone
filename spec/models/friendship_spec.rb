@@ -1,5 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Friendship, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'association tests' do
+    it 'friendship belongs to a user' do
+      friendship = Friendship.reflect_on_association(:user)
+      expect(friendship.macro).to eq(:belongs_to)
+    end
+
+    it 'friendship belongs to a friend' do
+      friendship = Friendship.reflect_on_association(:friend)
+      expect(friendship.macro).to eq(:belongs_to)
+    end
+  end
 end

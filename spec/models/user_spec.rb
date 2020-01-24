@@ -58,9 +58,35 @@ RSpec.describe User, type: :model do
 
   # Associations' tests
 
-  context 'Associations tests' do
+  context 'Posts associations tests' do
     it 'User has many posts' do
       user = User.reflect_on_association(:posts)
+      expect(user.macro).to eq(:has_many)
+    end
+  end
+
+  context 'Comments associations tests' do
+    it 'User has many comments' do
+      user = User.reflect_on_association(:comments)
+      expect(user.macro).to eq(:has_many)
+    end
+  end
+
+  context 'Likes associations tests' do
+    it 'User has many likes' do
+      user = User.reflect_on_association(:likes)
+      expect(user.macro).to eq(:has_many)
+    end
+  end
+
+  context 'Friendships associations tests' do
+    it 'User has many friendships' do
+      user = User.reflect_on_association(:friendships)
+      expect(user.macro).to eq(:has_many)
+    end
+
+    it 'User has many inverse_friendships' do
+      user = User.reflect_on_association(:inverse_friendships)
       expect(user.macro).to eq(:has_many)
     end
   end
