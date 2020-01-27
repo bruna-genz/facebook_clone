@@ -35,9 +35,17 @@
                         <%= user.first_name %> 
                         <%= user.last_name %>
                     </div>
-                    <%= button_to "#" do %>
-                        <i class="fas fa-user-plus"></i> Add friend
+
+                    <% if current_user.friend?(user) %>
+                        <%= button_to post_like_path(post, @like_id), method: :delete, class: "unlike" do %>
+                            <i class="fas fa-thumbs-up"></i>Like
+                        <% end %>
+                    <% else %>
+                        <%= button_to user_friendships_path(user), method: :post, class:"like-btn"  do %>
+                            <i class="fas fa-user-plus"></i> Add friend
+                        <% end %>  
                     <% end %>
+                
                 </li>
             <% end %>
         </ul>

@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   resources :posts do
     resources :likes
   end
+
+  resources :users do
+    resources :friendships
+  end
 end

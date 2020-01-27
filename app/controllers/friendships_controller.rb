@@ -1,14 +1,16 @@
-class FriendshipController < ApplicationController
+class FriendshipsController < ApplicationController
+  before_action :find_friend
   before_action :find_friendship, only: [:destroy]
+  
   def new
     @friendship = Friendship.new
   end
 
   def create
-    if friends?
+    if current_user.friend?(@friend)
       destroy
     else
-      @friendship = current_user.friendships.create(params[:user.id])
+      @friendship = current_user.friendships.create(friend_id: user.id)
     end
     redirect_to find_friends_path 
   end
@@ -27,7 +29,7 @@ class FriendshipController < ApplicationController
         @friendship = current_user.friendships.find(params[:id])
       end
 
-      def friends?
-        Friendship.where(user_id: current_user.id, friend_id: params[:user.id]).exists?
+      def find_friend
+        @friend = User.find(params[:user_id])
       end
 end
