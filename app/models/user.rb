@@ -20,8 +20,8 @@ class User < ApplicationRecord
   # Methods
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
-    friends_array + inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }
-    friends_array.compact
+    result = friends_array + inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }
+    result.compact
   end
 
   def pending_friends
@@ -45,4 +45,8 @@ class User < ApplicationRecord
   def pending_friend?(user)
     pending_friends.include?(user)
   end  
+
+  def is_requested?(user)
+    friends_requests.include?(user)
+  end
 end

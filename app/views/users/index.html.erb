@@ -10,7 +10,7 @@
                         <%= request.last_name %>
                     </div>
                     <div id="friends-btn">
-                        <%= button_to "#" do %>
+                        <%= button_to user_confirm_friendship_path(request), method: :post, class:"like-btn"  do %>
                             Confirm
                         <% end %>
                         <%= button_to "#" do %>
@@ -28,7 +28,7 @@
         <p>People You May Know</p>
         <% @users.each do | user |%>
         <ul>
-            <% unless user == current_user %>
+            <% unless user == current_user || current_user.is_requested?(user) || current_user.friend?(user) %>
                 <li>
                     <div class= "creator">
                         <%= gravatar_for user %>

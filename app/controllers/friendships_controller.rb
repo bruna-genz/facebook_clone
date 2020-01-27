@@ -1,5 +1,5 @@
 class FriendshipsController < ApplicationController
-  before_action :find_friend
+  before_action :find_friend, except: [:index]
   before_action :find_friendship, only: [:destroy]
   
   def new
@@ -16,12 +16,17 @@ class FriendshipsController < ApplicationController
   end
 
   def index
-    @friendships = current_user.friendships.all
+    @friendships = current_user.friends
   end
 
   def destroy
     @friendship.destroy
     redirect_to find_friends_path 
+  end
+
+  def confirm
+    current_user.confirm_friend(@friend)
+    redirect_to find_friends_path
   end
 
   private

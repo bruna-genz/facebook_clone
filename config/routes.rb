@@ -21,5 +21,6 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :friendships
+    post 'friendships/confirm', as: 'confirm_friendship'
   end
 end
