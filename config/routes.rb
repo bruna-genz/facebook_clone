@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :contents
   resources :likes
   resources :comments
+  resources :friendships
 
   resources :posts do
     resources :likes
