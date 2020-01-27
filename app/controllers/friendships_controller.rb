@@ -10,7 +10,7 @@ class FriendshipsController < ApplicationController
     if current_user.friend?(@friend)
       destroy
     else
-      @friendship = current_user.friendships.create(friend_id: user.id)
+      @friendship = current_user.friendships.create(friend_id: params[:user_id])
     end
     redirect_to find_friends_path 
   end

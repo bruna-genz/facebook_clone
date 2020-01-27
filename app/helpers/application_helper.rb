@@ -44,4 +44,8 @@ module ApplicationHelper
   def count_comments(post)
     "#{post.comments.count} comments" if post.comments.any?
   end
+
+  def find_friendship_id(user)
+    @friendship_id = current_user.friendships.find { |friendship | friendship.friend_id == user.id }
+  end
 end
