@@ -48,4 +48,8 @@ module ApplicationHelper
   def find_friendship_id(user)
     @friendship_id = current_user.friendships.find { |friendship | friendship.friend_id == user.id }
   end
+
+  def find_inverse_friendship_id(user)
+    @inverse_friendship_id = current_user.inverse_friendships.find { |friendship | friendship.user_id == user.id }
+  end
 end

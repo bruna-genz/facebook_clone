@@ -13,7 +13,8 @@
                         <%= button_to user_confirm_friendship_path(request), method: :post, class:"like-btn"  do %>
                             Confirm
                         <% end %>
-                        <%= button_to "#" do %>
+                        <% find_inverse_friendship_id(request) %>
+                        <%= button_to user_delete_request_path(request, @inverse_friendship_id), method: :delete, class: "cancel-request" do %>
                             Delete request
                         <% end %>
                     </div>
@@ -38,11 +39,11 @@
 
                     <% if current_user.pending_friend?(user) %>
                         <% find_friendship_id(user) %>
-                        <%= button_to user_friendship_path(user, @friendship_id), method: :delete, class: "unlike" do %>
+                        <%= button_to user_friendship_path(user, @friendship_id), method: :delete, class: "cancel-request" do %>
                             Cancel request 
                         <% end %>
                     <% else %>
-                        <%= button_to user_friendships_path(user), method: :post, class:"like-btn"  do %>
+                        <%= button_to user_friendships_path(user), method: :post, class:"add-friend"  do %>
                             <i class="fas fa-user-plus"></i> Add friend
                         <% end %>  
                     <% end %>
