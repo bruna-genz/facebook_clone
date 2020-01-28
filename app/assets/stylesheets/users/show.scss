@@ -4,20 +4,40 @@
         padding-left: 8.5em;
     } 
     .profile-img-bg {
-        background-color: red;
         width: 85%;
         @media only screen and (max-width: 1463px) {
             width: 77%;
         }         
         height: 17em;
+        background-image: url(https://images.unsplash.com/photo-1565638459249-c85cbb2faaa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
     }
     .profile-navbar {
-        background-color: blue;
+        padding: 0;
         width: 85%;
         @media only screen and (max-width: 1463px) {
             width: 77%;
         } 
-        
+        .navbar {
+            background-color: white !important;
+            .navbar-menu {
+                margin-left: 27%;
+            }
+            .navbar-item {
+                border-left: solid 1px rgb(209, 213, 216);
+            }
+            .navbar-start {
+                border-right: solid 1px rgb(209, 213, 216);
+            }
+            .navbar-link,
+            .navbar-item {
+                color: #3B5998;
+                font-weight: bold;
+                p {
+                    color: rgb(137, 140, 146);
+                    padding-left: 5px;
+                }
+            }
+        }        
     }
    
     .profile-friends {

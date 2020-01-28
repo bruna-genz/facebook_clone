@@ -6,16 +6,17 @@
                 <li>
                     <div class="friend-name">    
                         <%= link_to friend do %>
-                    
                             <%= gravatar_for friend %>
                             <div id="friends-info">
-                                <%= friend.first_name + " #{friend.last_name}" %>
-                                <%= "#{friend.friends.count} Friends" %>
-                            <div>
-                    
+                                <p><%= friend.first_name + " #{friend.last_name}" %></p>
+                                <p id="friends-count"><%= "#{friend.friends.count} Friends" %></p>
+                            </div>
                         <% end %>
                     </div>
-                    <%= button_to 'friends', "#"%>
+                    <%= button_to "#" do %>
+                        <i class="fas fa-check"></i>
+                        Friends
+                    <% end %>
                 </li>
             <% end %>
         </ul>
