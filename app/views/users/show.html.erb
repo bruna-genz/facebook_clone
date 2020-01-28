@@ -6,21 +6,26 @@
 </div>
 <div class="columns container">
     <div class="column is-one-quarter profile-friends">
-        <div class="image-friends">
-            <% current_user.friends[0..9].each do | friend | %>
-                <ul>
-                <li>
-                    <%= link_to friend do %>
-                    <%= gravatar_for friend %>
-                    <div id="friend-name">
-                        <%= friend.first_name + " #{friend.last_name}" %>
-                    </div>
-                    <% end %>
-                </li>
-                </ul>
-            <% end %>   
-        </div>
-
+      <div class="profile-subtitle">
+        <%= link_to friendships_path do %>
+            <i class="fas fa-users"></i>
+            Friends · 
+            <%= current_user.friends.count %>
+        <% end %>
+        <%= link_to "Find friends", find_friends_path %>
+      </div>
+      <ul class="image-friends">
+        <% current_user.friends[0..9].each do | friend | %>
+            <li>
+                <%= link_to friend do %>
+                  <%= gravatar_for friend %>
+                  <div id="friend-name">
+                    <%= friend.first_name + " #{friend.last_name}" %>
+                  </div>
+                <% end %>
+            </li>
+        <% end %>
+      </ul>   
     </div>
     <div class="column is-half post-timeline">
     </div>

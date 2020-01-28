@@ -21,30 +21,48 @@
     }
    
     .profile-friends {
-        background-color: red;
+        background-color: white;
+        border: solid 1px rgb(209, 213, 216);
+        border-radius: 4px;
         margin-top: 1em;
-        height: 22em;
         @media only screen and (min-width: 1463px) {
             width: 32%;
-            .image-friends {
-                display: flex;
-                    flex-wrap: wrap;
-                ul {
-                    
-                    li {
-                        
-                        width: 32%;
-                        a {
-                            img {
-                                border-radius: none;
-                                width: 15px;
-                                height: 15px; 
-                            }
-                        }
+        }
+        .image-friends {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            li {
+                width: 33%;
+                margin-bottom: 5px;
+                a {
+                    #friend-name {
+                        font-size: 13px;
+                        line-height: 15px;
                     }
-                }  
+                    .gravatar {
+                        border-radius: 0;
+                        width: 83px;
+                        height: 83px; 
+                    }
+                }
             }  
-        } 
+        }  
+        .profile-subtitle {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            a {
+                color: black;
+                i {
+                    font-size: 10px;
+                    color: white;
+                    background-color: #F50E6B;
+                    border-radius: 50%; 
+                    padding: 7px;
+                }
+            }
+        }      
 
     }
     .post-timeline {
