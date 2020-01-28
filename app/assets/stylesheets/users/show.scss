@@ -1,20 +1,32 @@
 .container {
-    padding-left: 8.5em;    
+    padding-left: 28.5em;   
+    @media only screen and (max-width: 1463px) {
+        padding-left: 8.5em;
+    } 
     .profile-img-bg {
         background-color: red;
-        width: 77%;
+        width: 85%;
+        @media only screen and (max-width: 1463px) {
+            width: 77%;
+        }         
         height: 17em;
     }
     .profile-navbar {
         background-color: blue;
-        width: 77%;
+        width: 85%;
+        @media only screen and (max-width: 1463px) {
+            width: 77%;
+        } 
+        
     }
    
-        
     .profile-friends {
         background-color: red;
         margin-top: 1em;
         height: 22em;
+        @media only screen and (min-width: 1463px) {
+            width: 32%;
+        } 
 
     }
     .post-timeline {
@@ -22,6 +34,9 @@
         margin-left: 1.1em;
         margin-top: 1em;
         height: 22em;
+        @media only screen and (min-width: 1463px) {
+            width: 51%;
+        } 
 
     } 
     

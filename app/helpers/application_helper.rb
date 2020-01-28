@@ -52,4 +52,8 @@ module ApplicationHelper
   def find_inverse_friendship_id(user)
     @inverse_friendship_id = current_user.inverse_friendships.find { |friendship | friendship.user_id == user.id }
   end
+
+  def select_friends(friends_ar, num)
+    friends_ar.select { |i| i < num }
+  end
 end
