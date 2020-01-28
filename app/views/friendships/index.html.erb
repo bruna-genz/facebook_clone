@@ -1,3 +1,23 @@
-<% @friendships.each do |friendship| %>
-    <%= friendship %>
-<% end %>
+<%= render 'users/profile_picturenav'%>
+<div class="columns container">
+    <div class="column is-three-quarters all-friends">
+        <ul>
+            <% current_user.friends.each do | friend | %>
+                <li>
+                    <div class="friend-name">    
+                        <%= link_to friend do %>
+                    
+                            <%= gravatar_for friend %>
+                            <div id="friends-info">
+                                <%= friend.first_name + " #{friend.last_name}" %>
+                                <%= "#{friend.friends.count} Friends" %>
+                            <div>
+                    
+                        <% end %>
+                    </div>
+                    <%= button_to 'friends', "#"%>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</div>
