@@ -1,7 +1,6 @@
 class FriendshipsController < ApplicationController
   before_action :find_friend, except: [:index]
   before_action :find_friendship, only: [:destroy]
-  before_action :find_inverse_friendship, only: [:inverse_destroy]
   
   def new
     @friendship = Friendship.new
@@ -25,23 +24,20 @@ class FriendshipsController < ApplicationController
     redirect_to find_friends_path 
   end
 
-  def inverse_destroy
-    @inverse_friendship
-    redirect_to find_friends_path 
-  end
-
   def confirm
     current_user.confirm_friend(@friend)
     redirect_to find_friends_path
   end
 
   private
-      def find_friendship 
-        @friendship = current_user.friendships.find(params[:id])
+      def find_friendship
+        if current_user.is_requested?(@friend)
+          @friendship = current_user.inverse_friendships.find(params[:id])
+        else
+          @friendship = current_user.friendships.find(params[:id])
+        end
       end
-      def find_inverse_friendship 
-        @inverse_friendship = current_user.inverse_friendships.find(params[:id])
-      end
+
       def find_friend
         @friend = User.find(params[:user_id])
       end

@@ -22,6 +22,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :friendships
     post 'friendships/confirm', as: 'confirm_friendship'
-    delete 'friendships/inverse_destroy', as: 'delete_request'
+    delete 'friendships/:id' => "friendships#inverse_destroy", as: 'delete_request'
   end
 end
