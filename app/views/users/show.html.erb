@@ -6,18 +6,21 @@
 </div>
 <div class="columns container">
     <div class="column is-one-quarter profile-friends">
-        <% select_friends(current_user.friends, 9).each do |friend| %>
-            <ul>
-              <li>
-                <% link_to friend do %>
-                  <%= gravatar_for friend %>
-                  <div id=friend-name>
-                    <%= friend.first_name friend.last_name %>
-                  </div>
-                <% end %>
-              </li>
-            </ul>
-        <% end %>
+        <div class="image-friends">
+            <% current_user.friends[0..9].each do | friend | %>
+                <ul>
+                <li>
+                    <%= link_to friend do %>
+                    <%= gravatar_for friend %>
+                    <div id="friend-name">
+                        <%= friend.first_name + " #{friend.last_name}" %>
+                    </div>
+                    <% end %>
+                </li>
+                </ul>
+            <% end %>   
+        </div>
+
     </div>
     <div class="column is-half post-timeline">
     </div>

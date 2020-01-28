@@ -26,6 +26,24 @@
         height: 22em;
         @media only screen and (min-width: 1463px) {
             width: 32%;
+            .image-friends {
+                display: flex;
+                    flex-wrap: wrap;
+                ul {
+                    
+                    li {
+                        
+                        width: 32%;
+                        a {
+                            img {
+                                border-radius: none;
+                                width: 15px;
+                                height: 15px; 
+                            }
+                        }
+                    }
+                }  
+            }  
         } 
 
     }
