@@ -95,5 +95,30 @@
         } 
 
     } 
-    
+
+
+    /*   PROFILE IMG  */
+    #profile-img {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 13%;
+        top: 59%;
+        z-index: 1000 !important;
+        .gravatar {
+            width: 9.5em;
+            height: 9.5em;
+            background-color: white;
+            padding: 3px;
+            border: solid 1px rgb(209, 213, 216);
+            
+        }
+        p {
+            color: white;
+            padding: 24px 0 0 15px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
 }
+

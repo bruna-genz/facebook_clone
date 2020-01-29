@@ -20,10 +20,10 @@
             About
         </a>
 
-        <a class="navbar-item">
+        <%=link_to friendships_path, class: "navbar-item" do %>
             Friends
             <p><%= current_user.friends.count %></p>
-        </a>
+        <% end %>
 
         <a class="navbar-item">
             Photos
