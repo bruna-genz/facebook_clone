@@ -29,7 +29,7 @@
         <p>People You May Know</p>
         <% @users.each do | user |%>
         <ul>
-            <% unless user == current_user || current_user.is_requested?(user) || current_user.friend?(user) %>
+            <% unless user == current_user || current_user.requested?(user) || current_user.friend?(user) %>
                 <li>
                     <div class= "creator">
                         <%= gravatar_for user %>

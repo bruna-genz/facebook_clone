@@ -33,7 +33,7 @@ class User < ApplicationRecord
   end
 
   def confirm_friend(user)
-    friendship = inverse_friendships.find { |friendship| friendship.user == user }
+    friendship = inverse_friendships.find { |inverse_friendship| inverse_friendship.user == user }
     friendship.confirmed = true
     friendship.save
   end
@@ -46,7 +46,7 @@ class User < ApplicationRecord
     pending_friends.include?(user)
   end
 
-  def is_requested?(user)
+  def requested?(user)
     friends_requests.include?(user)
   end
 end
