@@ -3,5 +3,8 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  
+  def show
+    @post = Post.new
+    @comment = Comment.new
+  end
 end

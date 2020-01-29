@@ -3,6 +3,9 @@
     @media only screen and (max-width: 1463px) {
         padding-left: 8.5em;
     } 
+
+
+    /*   BG IMG  */
     .profile-img-bg {
         width: 85%;
         @media only screen and (max-width: 1463px) {
@@ -11,6 +14,8 @@
         height: 17em;
         background-image: url(https://images.unsplash.com/photo-1565638459249-c85cbb2faaa8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
     }
+
+    /*   PROFILE NAVBAR  */
     .profile-navbar {
         padding: 0;
         width: 85%;
@@ -39,12 +44,20 @@
             }
         }        
     }
+
+    /*   LEFT CONTAINER    */
+    .left-container {
+        display: flex;
+        flex-direction: column !important;
+    }
    
+    /*   FRIENDS CONTAINER  */
     .profile-friends {
         background-color: white;
         border: solid 1px rgb(209, 213, 216);
         border-radius: 4px;
         margin-top: 1em;
+        height: 400px;
         @media only screen and (min-width: 1463px) {
             width: 32%;
         }
@@ -85,11 +98,11 @@
         }      
 
     }
+
+    /*   POST TIMELINE */
     .post-timeline {
-        background-color: green;
         margin-left: 1.1em;
-        margin-top: 1em;
-        height: 22em;
+        padding: 0 !important;
         @media only screen and (min-width: 1463px) {
             width: 51%;
         } 
@@ -105,6 +118,10 @@
         left: 13%;
         top: 59%;
         z-index: 1000 !important;
+        @media only screen and (min-width: 1463px) {
+            left: 35%;
+            top: 56%;
+        }
         .gravatar {
             width: 9.5em;
             height: 9.5em;

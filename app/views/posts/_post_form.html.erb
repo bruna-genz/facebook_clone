@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+
+    <%= render 'layouts/partials/errors' %>
+
+    <div class="label">
+    <%= f.label :content, 'Create post'%>
+    </div>
+    <div class="post-form-box">
+    <%= gravatar_for current_user %>
+    <%= f.text_area :content, placeholder: "What's in your mind, #{current_user.first_name}.", class: 'post-text' %><br/>
+    </div>
+
+    <div class="post-btn">
+    <%= f.submit "Create post"%>
+    </div>
+<% end %>

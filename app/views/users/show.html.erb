@@ -1,27 +1,47 @@
 <%= render 'profile_picturenav'%>
-<div class="columns container">
-    <div class="column is-one-quarter profile-friends">
-      <div class="profile-subtitle">
-        <%= link_to friendships_path do %>
-            <i class="fas fa-users"></i>
-            Friends · 
-            <%= current_user.friends.count %>
-        <% end %>
-        <%= link_to "Find friends", find_friends_path %>
-      </div>
-      <ul class="image-friends">
-        <% current_user.friends[0..9].each do | friend | %>
-            <li>
-                <%= link_to friend do %>
-                  <%= gravatar_for friend %>
-                  <div id="friend-name">
-                    <%= friend.first_name + " #{friend.last_name}" %>
-                  </div>
-                <% end %>
-            </li>
-        <% end %>
-      </ul>   
+<div class="columns container left-container">
+  <div class="column is-one-quarter profile-friends">
+    <div class="profile-subtitle">
+      <i class="fas fa-globe-americas"></i>
+      Intro
     </div>
-    <div class="column is-half post-timeline">
+    <%= current_user.birthday %>
+    <%= "Joined #{time_ago_in_words(current_user.created_at)}" %>
+  </div>
+
+  <div class="column is-one-quarter profile-friends">
+    <div class="profile-subtitle">
+      <%= link_to friendships_path do %>
+          <i class="fas fa-users"></i>
+          Friends · 
+          <%= current_user.friends.count %>
+      <% end %>
+      <%= link_to "Find friends", find_friends_path %>
     </div>
+    <ul class="image-friends">
+      <% current_user.friends[0..9].each do | friend | %>
+          <li>
+              <%= link_to friend do %>
+                <%= gravatar_for friend %>
+                <div id="friend-name">
+                  <%= friend.first_name + " #{friend.last_name}" %>
+                </div>
+              <% end %>
+          </li>
+      <% end %>
+    </ul>   
+  </div>
+
+  <div class="column is-half post-timeline">
+    <%= render 'posts/post_form' %>
+    <div class="timeline">
+        <% current_user.posts.each do | post |%>
+          <ul>
+              <li>
+                <%= render post %>
+              </li>
+          </ul>
+        <% end %>
+    </div>
+  </div>
 </div>

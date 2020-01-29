@@ -6,7 +6,9 @@
     </div>
     <div id="profile-img">
         <%= gravatar_for current_user%>
-        <p><%= "#{current_user.first_name}" + " #{current_user.last_name}"%></p>
+        <%= link_to profile_path do %>
+            <p><%= "#{current_user.first_name}" + " #{current_user.last_name}"%></p>
+        <% end %>
     </div>
 </div>
 <div class="columns container">
