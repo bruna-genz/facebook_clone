@@ -1,35 +1,46 @@
 <%= render 'profile_picturenav'%>
-<div class="columns container left-container">
+<div class="columns container">
   <div class="column is-one-quarter profile-friends">
-    <div class="profile-subtitle">
-      <i class="fas fa-globe-americas"></i>
-      Intro
-    </div>
-    <%= current_user.birthday %>
-    <%= "Joined #{time_ago_in_words(current_user.created_at)}" %>
-  </div>
+    <div id="user-info">
+      <div class="profile-subtitle">
+        <div>
+          <i class="fas fa-globe"></i>
+          Intro
+        </div>
+      </div>
+      <p>
+        <i class="fas fa-birthday-cake"></i>
+        <%= current_user.birthday.strftime("Birthday: %m/%d/%Y") %>
+      </p>
+      <p> 
+      <i class="fas fa-history"></i>
 
-  <div class="column is-one-quarter profile-friends">
-    <div class="profile-subtitle">
-      <%= link_to friendships_path do %>
-          <i class="fas fa-users"></i>
-          Friends · 
-          <%= current_user.friends.count %>
-      <% end %>
-      <%= link_to "Find friends", find_friends_path %>
+        <%= "Joined #{time_ago_in_words(current_user.created_at)}" %>
+      </p>
     </div>
-    <ul class="image-friends">
-      <% current_user.friends[0..9].each do | friend | %>
-          <li>
-              <%= link_to friend do %>
-                <%= gravatar_for friend %>
-                <div id="friend-name">
-                  <%= friend.first_name + " #{friend.last_name}" %>
-                </div>
-              <% end %>
-          </li>
-      <% end %>
-    </ul>   
+
+    <div id="friends-container">
+      <div class="profile-subtitle">
+        <%= link_to friendships_path do %>
+            <i class="fas fa-users"></i>
+            Friends · 
+            <%= current_user.friends.count %>
+        <% end %>
+        <%= link_to "Find friends", find_friends_path %>
+      </div>
+      <ul class="image-friends">
+        <% current_user.friends[0..9].each do | friend | %>
+            <li>
+                <%= link_to friend do %>
+                  <%= gravatar_for friend %>
+                  <div id="friend-name">
+                    <%= friend.first_name + " #{friend.last_name}" %>
+                  </div>
+                <% end %>
+            </li>
+        <% end %>
+      </ul>
+    </div>   
   </div>
 
   <div class="column is-half post-timeline">

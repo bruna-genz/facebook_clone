@@ -45,55 +45,66 @@
         }        
     }
 
-    /*   LEFT CONTAINER    */
-    .left-container {
-        display: flex;
-        flex-direction: column !important;
-    }
    
     /*   FRIENDS CONTAINER  */
     .profile-friends {
-        background-color: white;
-        border: solid 1px rgb(209, 213, 216);
-        border-radius: 4px;
-        margin-top: 1em;
-        height: 400px;
+        padding: 0 !important;
+        
+        
+        
         @media only screen and (min-width: 1463px) {
             width: 32%;
         }
-        .image-friends {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            li {
-                width: 33%;
-                margin-bottom: 5px;
-                a {
-                    #friend-name {
-                        font-size: 13px;
-                        line-height: 15px;
+        #user-info {
+            background-color: white;
+            border: solid 1px rgb(209, 213, 216);
+            padding: .5em;
+            border-radius: 4px;
+            margin-top: 1em;
+        }
+        #friends-container {
+            background-color: white;
+            border: solid 1px rgb(209, 213, 216);
+            padding: .5em;
+            border-radius: 4px;
+            margin-top: .5em;
+            .image-friends {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                li {
+                    width: 33%;
+                    margin-bottom: 5px;
+                    a {
+                        #friend-name {
+                            font-size: 13px;
+                            line-height: 15px;
+                        }
+                        .gravatar {
+                            border-radius: 0;
+                            width: 83px;
+                            height: 83px; 
+                        }
                     }
-                    .gravatar {
-                        border-radius: 0;
-                        width: 83px;
-                        height: 83px; 
-                    }
-                }
+                }  
             }  
-        }  
+            
+        }
         .profile-subtitle {
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
+            i {
+                font-size: 10px;
+                color: white;
+                background-color: #F50E6B;
+                border-radius: 50%; 
+                padding: 7px;
+            }
+            
             a {
                 color: black;
-                i {
-                    font-size: 10px;
-                    color: white;
-                    background-color: #F50E6B;
-                    border-radius: 50%; 
-                    padding: 7px;
-                }
+               
             }
         }      
 
