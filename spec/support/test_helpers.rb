@@ -9,6 +9,16 @@ module TestHelper
              gender: 'male')
   end
 
+  def create_user2
+    User.new(first_name: 'Mary',
+             last_name: 'Doe',
+             email: 'mary.doe@example.com',
+             password: '123456',
+             password_confirmation: '123456',
+             birthday: Time.now - 18.years,
+             gender: 'female')
+  end
+
   def wrong_signup_user
     visit root_path
     within('.sign-up-form') do
@@ -54,5 +64,9 @@ module TestHelper
       fill_in 'Current password', with: '123456'
     end
     click_button 'Update'
+  end
+
+  def request_friendship
+    Friendship.create(user_id: 2, friend_id: 1)
   end
 end

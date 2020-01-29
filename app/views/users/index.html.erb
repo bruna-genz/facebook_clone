@@ -10,7 +10,7 @@
                         <%= request.last_name %>
                     </div>
                     <div id="friends-btn">
-                        <%= button_to user_confirm_friendship_path(request), method: :post, class:"like-btn"  do %>
+                        <%= button_to user_confirm_friendship_path(request), method: :post, class:"like-btn confirm-btn"  do %>
                             Confirm
                         <% end %>
                         <% find_inverse_friendship_id(request) %>

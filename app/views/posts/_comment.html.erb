@@ -1,6 +1,6 @@
 <div class="comment-form">
     <%= gravatar_for current_user %>
-    <%= form_for @comment, :url => { :controller => "comments", :action => "create" }, :html => {:method => :get, :class => 'new-comment'} do |f| %>
+    <%= form_for @comment, :url => { :controller => "comments", :action => "create" }, :html => {:method => :post, :class => 'new-comment'} do |f| %>
         <%= f.text_area :sub_content, placeholder: "Write a comment..." %>
         <%= f.hidden_field :post_id, :value => post.id %>
         <%= f.button :class => 'comment-btn' do %>
