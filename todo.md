@@ -1,5 +1,13 @@
 Milestone 5:
-- The Friend Request shows up in the notifications section of a User’s navbar
+- fix integration tests
+
+
+
+
+
+
+
+
 
 
 Future milestones:
