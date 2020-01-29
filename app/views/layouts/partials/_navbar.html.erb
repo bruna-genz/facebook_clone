@@ -48,10 +48,17 @@
     <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link is-arrowless">
           <i class="fas fa-users"></i>
+          <% if (current_user.friends_requests.count > 0) %>
+            <div>
+              <%= current_user.friends_requests.count %>
+            </div>
+          <% end %>
         </a>
 
         <div class="navbar-dropdown">
-          <%= link_to "Friends requests", "#", class:"navbar-item" %>
+          <%= link_to find_friends_path, class:"navbar-item" do %>
+              Friends requests <%= current_user.friends_requests.count %>
+          <% end %>
           <hr class="navbar-divider">
           <a class="navbar-item">
             Report an issue
