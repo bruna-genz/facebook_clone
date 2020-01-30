@@ -14,7 +14,7 @@
                             Confirm
                         <% end %>
                         <% find_inverse_friendship_id(request) %>
-                        <%= button_to user_friendship_path(request, @inverse_friendship_id), method: :delete, class: "cancel-request" do %>
+                        <%= button_to user_friendship_path(request, @friendship_id), method: :delete, class: "cancel-request" do %>
                             Delete request
                         <% end %>
                     </div>

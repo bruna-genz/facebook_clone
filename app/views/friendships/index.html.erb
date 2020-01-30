@@ -2,7 +2,7 @@
 <div class="columns container">
     <div class="column is-three-quarters all-friends">
         <ul>
-            <% @user.friends.each do | friend | %>
+            <% current_user.friends.each do | friend | %>
                 <li>
                     <div class="friend-name">    
                         <%= link_to friend do %>
@@ -13,10 +13,26 @@
                             </div>
                         <% end %>
                     </div>
-                    <%= button_to "#" do %>
-                        <i class="fas fa-check"></i>
-                        Friends
-                    <% end %>
+
+                    <div class="dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span><i class="fas fa-check"></i> Friends</span>
+                                
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <% find_friendship_id(friend) == nil ? find_inverse_friendship_id(friend) : find_friendship_id(friend) %>
+                                    <%= link_to user_friendship_path(friend, @friendship_id), method: :delete, class: "cancel-request" do %>
+                                        Delete friend
+                                    <% end %>                                                                       
+                                </div>
+                            </div>  
+                        </div>
+                  </div>
+                    
                 </li>
             <% end %>
         </ul>
