@@ -21,7 +21,7 @@
 
     <div id="friends-container">
       <div class="profile-subtitle">
-        <%= link_to friendships_path do %>
+        <%= link_to user_friendships_path(@user) do %>
             <i class="fas fa-users"></i>
             Friends · 
             <%= @user.friends.count %>
@@ -29,7 +29,7 @@
         <%= link_to "Find friends", find_friends_path %>
       </div>
       <ul class="image-friends">
-        <% @user.friends[0..9].each do | friend | %>
+        <% @user.friends[0..8].each do | friend | %>
             <li>
                 <%= link_to friend do %>
                   <%= gravatar_for friend %>

@@ -2,7 +2,7 @@
 <div class="columns container">
     <div class="column is-three-quarters all-friends">
         <ul>
-            <% current_user.friends.each do | friend | %>
+            <% @user.friends.each do | friend | %>
                 <li>
                     <div class="friend-name">    
                         <%= link_to friend do %>

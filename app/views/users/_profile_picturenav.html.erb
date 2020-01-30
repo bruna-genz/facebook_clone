@@ -5,9 +5,11 @@
   
     </div>
     <div id="profile-img">
-        <%= gravatar_for @user%>
-        <%= link_to profile_path do %>
-            <p><%= "#{@user.first_name}" + " #{@user.last_name}"%></p>
+        <% if @user ||= current_user %>
+            <%= gravatar_for @user%>
+            <%= link_to profile_path do %>
+                <p><%= "#{@user.first_name}" + " #{@user.last_name}"%></p>
+            <% end %>
         <% end %>
     </div>
 </div>

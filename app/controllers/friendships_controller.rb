@@ -1,6 +1,7 @@
 class FriendshipsController < ApplicationController
   before_action :find_friend, except: [:index]
   before_action :find_friendship, only: [:destroy]
+  before_action :find_user, only: [:index]
 
   def new
     @friendship = Friendship.new
@@ -16,7 +17,7 @@ class FriendshipsController < ApplicationController
   end
 
   def index
-    @friendships = current_user.friends
+    @friendships = @user.friends
   end
 
   def destroy
@@ -43,5 +44,9 @@ class FriendshipsController < ApplicationController
 
   def find_friend
     @friend = User.find(params[:user_id])
+  end
+
+  def find_user
+    @user = User.find(params[:user_id])
   end
 end
