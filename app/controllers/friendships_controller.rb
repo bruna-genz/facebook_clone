@@ -21,8 +21,8 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship.destroy if @friendship
-    @friendship2.destroy if @friendship2
+    @friendship&.destroy
+    @friendship2&.destroy
     flash[:danger] = 'Friendship request denied'
     redirect_to find_friends_path
   end
