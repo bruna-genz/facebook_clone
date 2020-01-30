@@ -1,13 +1,14 @@
 @import "../variables.scss";
 
 .navbar {
-    
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     background-color: $facebook-blue !important;
     height: 42px;
     .friend-notification {
         background-color: red;
         margin-top: 16px;
-       
         padding: 0 5px;
         font-size: 10px;
         border-radius: 50%;

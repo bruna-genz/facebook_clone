@@ -8,11 +8,13 @@
     border-radius: 50%;
 }
 .column-3 {
-    position:-webkit-sticky; 
-    position:sticky; 
-    top:0;
     padding-right: 20%;
     padding-top: 2em;
+    .sticky {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 70px;
+    }
     #white-bg {
         background-color: white;
         border: 1px solid rgb(155, 155, 155);
@@ -22,7 +24,6 @@
 }
 
 .column-1 {
-    position:-webkit-sticky; position:sticky; top:0;
     padding-left: 20%;
     padding-top: 2em;
     @media only screen and (max-width: 1463px) {
@@ -36,7 +37,13 @@
         height: 20px;
         margin-right: 5px;
     }
+    .sticky {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 70px;
+    }
     .aside {
+        
         margin-left: 40%;
         margin-bottom: 10px;
         padding: 3px;
