@@ -55,14 +55,20 @@
           <% end %>
         </a>
 
-        <div class="navbar-dropdown">
-          <%= link_to find_friends_path, class:"navbar-item " do %>
-              Friends requests <%= current_user.friends_requests.count %>
-          <% end %>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+        <div class="navbar-dropdown large">
+          <ul class="navbar-item ">
+            <% current_user.friends_requests.each do |request| %>
+                <li>
+                  <%= link_to request do %>
+                    <%= gravatar_for request %>
+                    <%= request.first_name + " #{request.last_name}" %>
+                  <% end %> 
+                  <%= link_to find_friends_path, class: "dropdowb-button" do %>
+                      <i class="fas fa-user-plus"></i> Add friend
+                  <% end %> 
+                </li>
+            <% end %>
+          </ul>
         </div>
     </div>
 

@@ -60,5 +60,32 @@
         border-radius: 50%;
         margin-right: .5em;
     }
+    .large {
+        width: 500%;
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+                .dropdowb-button {
+                    width: auto;
+                    background-color: #3B5998;
+                    color: white;
+                    border: none;
+                    padding: .5em;
+                    margin: .5em 0;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-size: 11px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 
 }

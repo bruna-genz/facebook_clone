@@ -7,7 +7,7 @@ Milestone 6:
 
 
 
-
+- Fix link on profile name;
 
 
 
