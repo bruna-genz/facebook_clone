@@ -1,5 +1,6 @@
 Milestone 6:
 
+- make button on friendship index destroy the friendship.
 
 
 
