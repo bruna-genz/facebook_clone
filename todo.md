@@ -1,6 +1,17 @@
-Milestone 4:
-
-- Fix design of aside columns of dashboar show (use position sticky).
+Milestone 5:
 
 
 
+
+
+
+
+
+
+
+
+Future milestones:
+- Sign in should use Omniauth to allow a user to sign in with their real Facebook account.
+
+Extra:
+- Use active storage for profile bg picture;

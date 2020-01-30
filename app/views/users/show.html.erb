@@ -1,1 +1,58 @@
-<h1>This is profile page</h1>
+<%= render 'profile_picturenav'%>
+<div class="columns container">
+  <div class="column is-one-quarter profile-friends">
+    <div id="user-info">
+      <div class="profile-subtitle">
+        <div>
+          <i class="fas fa-globe"></i>
+          Intro
+        </div>
+      </div>
+      <p>
+        <i class="fas fa-birthday-cake"></i>
+        <%= current_user.birthday.strftime("Birthday: %m/%d/%Y") %>
+      </p>
+      <p> 
+      <i class="fas fa-history"></i>
+
+        <%= "Joined #{time_ago_in_words(current_user.created_at)}" %>
+      </p>
+    </div>
+
+    <div id="friends-container">
+      <div class="profile-subtitle">
+        <%= link_to friendships_path do %>
+            <i class="fas fa-users"></i>
+            Friends · 
+            <%= current_user.friends.count %>
+        <% end %>
+        <%= link_to "Find friends", find_friends_path %>
+      </div>
+      <ul class="image-friends">
+        <% current_user.friends[0..9].each do | friend | %>
+            <li>
+                <%= link_to friend do %>
+                  <%= gravatar_for friend %>
+                  <div id="friend-name">
+                    <%= friend.first_name + " #{friend.last_name}" %>
+                  </div>
+                <% end %>
+            </li>
+        <% end %>
+      </ul>
+    </div>   
+  </div>
+
+  <div class="column is-half post-timeline">
+    <%= render 'posts/post_form' %>
+    <div class="timeline">
+        <% current_user.posts.each do | post |%>
+          <ul>
+              <li>
+                <%= render post %>
+              </li>
+          </ul>
+        <% end %>
+    </div>
+  </div>
+</div>

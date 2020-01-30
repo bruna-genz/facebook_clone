@@ -1,0 +1,24 @@
+<%= render 'users/profile_picturenav'%>
+<div class="columns container">
+    <div class="column is-three-quarters all-friends">
+        <ul>
+            <% current_user.friends.each do | friend | %>
+                <li>
+                    <div class="friend-name">    
+                        <%= link_to friend do %>
+                            <%= gravatar_for friend %>
+                            <div id="friends-info">
+                                <p><%= friend.first_name + " #{friend.last_name}" %></p>
+                                <p id="friends-count"><%= "#{friend.friends.count} Friends" %></p>
+                            </div>
+                        <% end %>
+                    </div>
+                    <%= button_to "#" do %>
+                        <i class="fas fa-check"></i>
+                        Friends
+                    <% end %>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</div>

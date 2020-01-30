@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  
- 
-  get 'comments/index'
-  get 'comments/create'
-  get 'comments/new'
-  get 'comments/destroy'
   root to: 'posts#index'
   get 'users/show', as: 'profile'
   get 'users/index', as: 'find_friends'
@@ -19,8 +13,15 @@ Rails.application.routes.draw do
   resources :contents
   resources :likes
   resources :comments
+  resources :friendships
 
   resources :posts do
     resources :likes
+  end
+
+  resources :users do
+    resources :friendships
+    post 'friendships/confirm', as: 'confirm_friendship'
+    delete 'friendships/:id' => "friendships#inverse_destroy", as: 'delete_request'
   end
 end
