@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 2020_01_24_192849) do
 
   create_table "comments", force: :cascade do |t|
     t.text "sub_content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.bigint "post_id"
     t.bigint "commenter_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.index ["commenter_id"], name: "index_comments_on_commenter_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
   end

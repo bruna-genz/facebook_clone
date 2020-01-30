@@ -29,7 +29,7 @@
   <!--  Right -->  
     
     <div class="navbar-brand">
-        <%= link_to profile_path, class: "navbar-link is-arrowless" do %>
+        <%= link_to current_user, class: "navbar-link is-arrowless" do %>
             <%= gravatar_for current_user %>
             <%= current_user.first_name %>
         <% end %>

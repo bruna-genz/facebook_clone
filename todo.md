@@ -1,4 +1,4 @@
-Milestone 5:
+Milestone 6:
 
 
 
@@ -15,3 +15,4 @@ Future milestones:
 
 Extra:
 - Use active storage for profile bg picture;
+- see other users profile

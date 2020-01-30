@@ -22,7 +22,7 @@
 
         <%=link_to friendships_path, class: "navbar-item" do %>
             Friends
-            <p><%= current_user.friends.count %></p>
+            <p><%= @user.friends.count %></p>
         <% end %>
 
         <a class="navbar-item">
