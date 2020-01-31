@@ -29,6 +29,7 @@ class FriendshipsController < ApplicationController
 
   def confirm
     current_user.confirm_friend(@friend)
+    @friendship2 = Friendship.create(user_id: current_user.id, friend_id: params[:user_id], confirmed: true)
     flash[:success] = 'You have a new friend :)'
     redirect_to find_friends_path
   end
