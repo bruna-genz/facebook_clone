@@ -15,3 +15,4 @@ Extra:
 - Use active storage for profile bg picture;
 - Implement chat;
 - Make search bar functional.
+- Set mailer.
