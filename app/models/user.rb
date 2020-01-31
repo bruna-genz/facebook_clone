@@ -49,6 +49,4 @@ class User < ApplicationRecord
   def requested?(user)
     friends_requests.include?(user)
   end
-
-  
 end

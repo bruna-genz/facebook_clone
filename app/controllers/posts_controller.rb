@@ -40,6 +40,4 @@ class PostsController < ApplicationController
     flash[:danger] = 'You must sign in.' unless user_signed_in?
     redirect_to new_content_path unless user_signed_in?
   end
-
-  
 end
