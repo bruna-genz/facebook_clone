@@ -50,7 +50,5 @@ class User < ApplicationRecord
     friends_requests.include?(user)
   end
 
-  #def 
-  #  current_user.friends.each { |friend| posts = Post.all.where('creator_id = ?', friend.id) }
-  #end
+  
 end

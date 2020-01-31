@@ -22,8 +22,9 @@ class PostsController < ApplicationController
   def update; end
 
   def index
+    ids = current_user.friends.pluck(:id) << current_user.id
     @post = Post.new
-    @posts = Post.all
+    @posts = Post.where(creator_id: ids)
     @comment = Comment.new
   end
 
@@ -39,4 +40,6 @@ class PostsController < ApplicationController
     flash[:danger] = 'You must sign in.' unless user_signed_in?
     redirect_to new_content_path unless user_signed_in?
   end
+
+  
 end
