@@ -64,11 +64,16 @@
     .large {
         width: 500%;
         ul {
+            display: flex;
+            flex-wrap: wrap;
             li {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
+                border-bottom: solid 1px rgb(209, 213, 216);
+                padding-bottom: 5px;
+                margin-bottom: 5px;
                 a {
                     display: flex;
                     align-items: center;
