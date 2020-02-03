@@ -1,13 +1,14 @@
 @import "../variables.scss";
 
 .navbar {
-    
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     background-color: $facebook-blue !important;
     height: 42px;
     .friend-notification {
         background-color: red;
         margin-top: 16px;
-       
         padding: 0 5px;
         font-size: 10px;
         border-radius: 50%;
@@ -59,6 +60,38 @@
     .gravatar {
         border-radius: 50%;
         margin-right: .5em;
+    }
+    .large {
+        width: 500%;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                border-bottom: solid 1px rgb(209, 213, 216);
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+                .dropdowb-button {
+                    width: auto;
+                    background-color: #3B5998;
+                    color: white;
+                    border: none;
+                    padding: .5em;
+                    margin: .5em 0;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-size: 11px;
+                    font-weight: bold;
+                }
+            }
+        }
     }
 
 }

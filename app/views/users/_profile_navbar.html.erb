@@ -19,10 +19,11 @@
         <a class="navbar-item">
             About
         </a>
-
-        <%=link_to friendships_path, class: "navbar-item" do %>
-            Friends
-            <p><%= current_user.friends.count %></p>
+        <% if @user ||= current_user %>
+            <%=link_to user_friendships_path(@user), class: "navbar-item" do %>
+                Friends
+                <p><%= @user.friends.count %></p>
+            <% end %>
         <% end %>
 
         <a class="navbar-item">

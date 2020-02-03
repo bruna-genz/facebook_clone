@@ -5,16 +5,18 @@
             <% current_user.friends_requests.each do | request |%>
                 <li>   
                     <div class= "creator">
-                        <%= gravatar_for request %>
-                        <%= request.first_name %> 
-                        <%= request.last_name %>
+                        <%= link_to request, class:"creator" do %>
+                            <%= gravatar_for request %>
+                            <%= request.first_name %> 
+                            <%= request.last_name %>
+                        <% end %>
                     </div>
                     <div id="friends-btn">
                         <%= button_to user_confirm_friendship_path(request), method: :post, class:"like-btn confirm-btn"  do %>
                             Confirm
                         <% end %>
                         <% find_inverse_friendship_id(request) %>
-                        <%= button_to user_friendship_path(request, @inverse_friendship_id), method: :delete, class: "cancel-request" do %>
+                        <%= button_to user_friendship_path(request, @friendship_id), method: :delete, class: "cancel-request" do %>
                             Delete request
                         <% end %>
                     </div>
@@ -32,9 +34,11 @@
             <% unless user == current_user || current_user.requested?(user) || current_user.friend?(user) %>
                 <li>
                     <div class= "creator">
-                        <%= gravatar_for user %>
-                        <%= user.first_name %> 
-                        <%= user.last_name %>
+                        <%= link_to user, class:"creator" do %>
+                            <%= gravatar_for user %>
+                            <%= user.first_name %> 
+                            <%= user.last_name %>
+                        <% end %>
                     </div>
 
                     <% if current_user.pending_friend?(user) %>

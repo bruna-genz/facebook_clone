@@ -1,8 +1,6 @@
-Milestone 5:
+Milestone 6:
 
-
-
-
+- make button on friendship index destroy the friendship.
 
 
 
@@ -15,3 +13,5 @@ Future milestones:
 
 Extra:
 - Use active storage for profile bg picture;
+- Implement chat;
+- Make search bar functional.

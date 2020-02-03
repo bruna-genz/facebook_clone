@@ -1,6 +1,7 @@
 class FriendshipsController < ApplicationController
   before_action :find_friend, except: [:index]
   before_action :find_friendship, only: [:destroy]
+  before_action :find_user, only: [:index]
 
   def new
     @friendship = Friendship.new
@@ -16,11 +17,12 @@ class FriendshipsController < ApplicationController
   end
 
   def index
-    @friendships = current_user.friends
+    @friendships = @user.friends
   end
 
   def destroy
-    @friendship.destroy
+    @friendship&.destroy
+    @friendship2&.destroy
     flash[:danger] = 'Friendship request denied'
     redirect_to find_friends_path
   end
@@ -34,14 +36,16 @@ class FriendshipsController < ApplicationController
   private
 
   def find_friendship
-    @friendship = if current_user.is_requested?(@friend)
-                    current_user.inverse_friendships.find(params[:id])
-                  else
-                    current_user.friendships.find(params[:id])
-                  end
+    @friend = User.find(params[:user_id])
+    @friendship = Friendship.where('user_id = ? and friend_id = ?', current_user.id, @friend.id).first
+    @friendship2 = Friendship.where('user_id = ? and friend_id = ?', @friend.id, current_user.id).first
   end
 
   def find_friend
     @friend = User.find(params[:user_id])
+  end
+
+  def find_user
+    @user = User.find(params[:user_id])
   end
 end

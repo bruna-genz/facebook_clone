@@ -22,8 +22,9 @@ class PostsController < ApplicationController
   def update; end
 
   def index
+    ids = current_user.friends.pluck(:id) << current_user.id
     @post = Post.new
-    @posts = Post.all
+    @posts = Post.where(creator_id: ids)
     @comment = Comment.new
   end
 

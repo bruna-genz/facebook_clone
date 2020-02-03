@@ -29,7 +29,7 @@
   <!--  Right -->  
     
     <div class="navbar-brand">
-        <%= link_to profile_path, class: "navbar-link is-arrowless" do %>
+        <%= link_to current_user, class: "navbar-link is-arrowless" do %>
             <%= gravatar_for current_user %>
             <%= current_user.first_name %>
         <% end %>
@@ -55,14 +55,24 @@
           <% end %>
         </a>
 
-        <div class="navbar-dropdown">
-          <%= link_to find_friends_path, class:"navbar-item " do %>
-              Friends requests <%= current_user.friends_requests.count %>
-          <% end %>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+        <div class="navbar-dropdown large">
+          <ul class="navbar-item ">
+            <% if current_user.friends_requests.any? %>
+              <% current_user.friends_requests.each do |request| %>
+                  <li>
+                    <%= link_to request do %>
+                      <%= gravatar_for request %>
+                      <%= request.first_name + " #{request.last_name}" %>
+                    <% end %> 
+                    <%= link_to find_friends_path, class: "dropdowb-button" do %>
+                        <i class="fas fa-user-plus"></i> Add friend
+                    <% end %> 
+                  </li>
+              <% end %>
+            <% else %>
+              <p>You don't have any notification</p>
+            <% end %>
+          </ul>
         </div>
     </div>
 
