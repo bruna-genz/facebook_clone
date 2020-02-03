@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :room_messages
+  resources :rooms
+  
   root to: 'posts#index'
   get 'users/show', as: 'profile'
   get 'users/index', as: 'find_friends'
