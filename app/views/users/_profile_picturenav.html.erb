@@ -7,7 +7,7 @@
     <div id="profile-img">
         <% if @user ||= current_user %>
             <%= gravatar_for @user%>
-            <%= link_to profile_path do %>
+            <%= link_to current_user do %>
                 <p><%= "#{@user.first_name}" + " #{@user.last_name}"%></p>
             <% end %>
         <% end %>

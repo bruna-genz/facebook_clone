@@ -1,7 +1,7 @@
 <div class="column column-1" >
     <div class="sticky">
         <div class="aside">
-            <%= link_to profile_path do %>
+            <%= link_to current_user do %>
                 <%= gravatar_for current_user %>
                 <%= current_user.first_name %>
                 <%= current_user.last_name %>
