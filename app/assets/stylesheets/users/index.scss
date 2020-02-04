@@ -27,7 +27,8 @@
         .creator {
             display: flex;
             align-items: center;
-            .gravatar {
+            .gravatar,
+            img {
                 border-radius: 0;
                 width: 70px;
                 height: 70px;

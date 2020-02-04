@@ -2,7 +2,8 @@
 @import "font-awesome";
 @import "../variables.scss";
 
-.gravatar {
+.gravatar,
+img {
     height: 30px;
     width: auto;
     border-radius: 50%;
@@ -32,7 +33,8 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     font-size: 15px;
-    .gravatar {
+    .gravatar,
+    img {
         width: 20px;
         height: 20px;
         margin-right: 5px;
@@ -97,7 +99,8 @@
         background-color: white;
         display: flex;
         align-items: center;
-        .gravatar {
+        .gravatar,
+        img {
             margin-left: 10px;
             height: 45px;
         }
@@ -142,7 +145,8 @@
         
         .creator {
             display: flex;
-            .gravatar {
+            .gravatar,
+            img {
                 padding-right: 3px;
             }
             

@@ -6,7 +6,7 @@
                 <li>   
                     <div class= "creator">
                         <%= link_to request, class:"creator" do %>
-                            <%= gravatar_for request %>
+                            <%= gravatar_or_facebook_img(request) %>
                             <%= request.first_name %> 
                             <%= request.last_name %>
                         <% end %>
@@ -35,7 +35,7 @@
                 <li>
                     <div class= "creator">
                         <%= link_to user, class:"creator" do %>
-                            <%= gravatar_for user %>
+                            <%= gravatar_or_facebook_img(user) %>
                             <%= user.first_name %> 
                             <%= user.last_name %>
                         <% end %>

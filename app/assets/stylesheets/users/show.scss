@@ -79,7 +79,8 @@
                             font-size: 13px;
                             line-height: 15px;
                         }
-                        .gravatar {
+                        .gravatar,
+                        img {
                             border-radius: 0;
                             width: 83px;
                             height: 83px; 
@@ -132,7 +133,8 @@
             left: 35%;
             top: 56%;
         }
-        .gravatar {
+        .gravatar,
+        img {
             width: 9.5em;
             height: 9.5em;
             background-color: white;

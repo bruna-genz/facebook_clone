@@ -6,7 +6,7 @@
     </div>
     <div id="profile-img">
         <% if @user ||= current_user %>
-            <%= gravatar_for @user%>
+            <%= gravatar_or_facebook_img(@user) %>
             <%= link_to current_user do %>
                 <p><%= "#{@user.first_name}" + " #{@user.last_name}"%></p>
             <% end %>
