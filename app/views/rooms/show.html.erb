@@ -9,13 +9,14 @@
 
   <div class="column chat-dashboard">
     <div class="column is-full room-status" >
-      <h1>Friend's name</h1>
+      <h1>Friends name</h1>
     </div>
       <div class="columns chat-container">
         <div class="column is-8 no-padding" >
           <div class="chat">
             <% @room_messages.each do |room_message| %>
-              <%= room_message %>
+              <%= gravatar_or_facebook_img(room_message.user) %>
+              <%= room_message.message %></br>
             <% end %>
           </div>
 
