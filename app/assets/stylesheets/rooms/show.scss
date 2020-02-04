@@ -1,25 +1,52 @@
 .chat-dashboard {
     padding-left: 0 !important;
+    padding-top: 0 !important;
 }
 .friend-rooms {  
     border-right: 1px solid rgb(206, 206, 206);
     background-color: white;
+    .chat-title {
+        display: flex;
+        margin-left: 10px;
+        h1 {
+            margin-left: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            color: black;
+        }
+    }
+    .has-icons-left {
+        margin-left: 10px;
+        input {
+            background-color: #F2F2F2;
+            border: none;
+            font-size: 15px;
+            margin-left: 5px;
+        }
+    }
 }
 .room-status {
-    border-bottom: 1px solid rgb(206, 206, 206);
+    border-bottom: 1px solid rgb(206, 206, 206) !important;
     background-color: white;
     height: 4em;
 }
-.columns {
-    height: 94.5%;
+.chat-container {
+    height: 93%;
+    margin-top: 0;
+    .no-padding {
+        padding-right: 0 !important;
+        padding-top: 0 !important;
+        border-right: 1px solid rgb(206, 206, 206);
+    }
     .chat {
         background: white;
-        height: 96.5%;
+        height: 95%;
         overflow-y: auto;
         width: 100%;
       }
-      .new_room_message {
-        background-color: white;
+    .new_room_message {
+    background-color: white;
+    padding: 0 5px;
         .input-group {
             display: flex;
             border-top: 0 none;
@@ -30,9 +57,33 @@
                 width: 80%;
                 background-color: #F2F2F2;
                 padding-left: 10px;
-                margin: 5px 10px;
+                margin: 0 10px 10px 10px;
+            }
+            .button {
+                border: none;
+                color: #0099FF;
+                font-size: 20px;
+                padding: 0 8px 9px 8px;
             }
         }
-      }
-      
+    }   
+}
+
+.chat-friend-info {
+    background-color: white;
+    padding-left: 0 !important;
+    .border-bottom {
+        border-bottom: 1px solid rgb(206, 206, 206) !important;
+        padding-left: 12px;
+    }
+    .user-image {
+        height: 20%;
+    }
+    .chat-options {
+        height: 35%;
+    }
+    .chat-support {
+        height: 45%;
+        padding-left: 12px;
+    }
 }

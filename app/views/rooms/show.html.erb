@@ -1,8 +1,9 @@
-<div class="columns">
+<div class="columns chat-container">
   <div class="column is-one-fifth friend-rooms" >
-    <h1 class>
-      <%= @room.name %>
-    </h1>
+    <div class="chat-title">
+      <%= gravatar_or_facebook_img(current_user) %>
+      <h1>Chats</h1>
+    </div>
     <%= render partial: 'rooms' %>
   </div>
 
@@ -10,8 +11,8 @@
     <div class="column is-full room-status" >
       <h1>Friend's name</h1>
     </div>
-      <div class="columns">
-        <div class="column is-8" >
+      <div class="columns chat-container">
+        <div class="column is-8 no-padding" >
           <div class="chat">
             <% @room_messages.each do |room_message| %>
               <%= room_message %>
@@ -20,9 +21,15 @@
 
           <%= form_for @room_message, remote: true do |form| %>
             <div class="input-group mb-3">
+              <i class="fas fa-plus-circle button chat-input"></i>
+              <i class="fas fa-folder button chat-input"></i>
+              <i class="fas fa-sticky-note button chat-input"></i>
+              <i class="fas fa-image button chat-input"></i>
               <%= form.text_field :message, placeholder: "Type a message..." %>
               <div class="input-group-append">
-                <%= form.submit "Send", class: 'button is-info chat-input' %>
+                <%= form.button :class => 'button chat-input' do %>
+                  <i class="far fa-paper-plane"></i>
+                <% end %>
               </div>
             </div>
 
@@ -30,8 +37,16 @@
           <% end %>
         </div>
         
-        <div class="column is-4" >
-          
+        <div class="column is-4 chat-friend-info" >
+          <div class="user-image border-bottom">
+            <h1>User name</h1>
+          </div>
+          <div class="chat-options border-bottom" >
+            <h3>Options</h3>
+          </div>
+          <div class="chat-support">
+            <h3>Privacy and Support</h3>
+          </div>
         </div>
       </div>
   </div> 
