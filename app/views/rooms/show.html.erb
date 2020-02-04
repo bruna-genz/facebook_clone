@@ -1,28 +1,39 @@
-<h1>
-  <%= @room.name %>
-</h1>
+
 
 <div class="columns">
-  <div class="column is-3">
+  <div class="column is-one-fifth friend-rooms" >
+    <h1 class>
+      <%= @room.name %>
+    </h1>
     <%= render partial: 'rooms' %>
   </div>
 
-  <div class="column is-9">
-    <div class="chat">
-      <% @room_messages.each do |room_message| %>
-        <%= room_message %>
-      <% end %>
-    </div>
+  <div class="column chat-dashboard">
+    <div class="column is-full room-status" ></div>
+      <div class="columns">
+        <div class="column is-8" >
+          <div class="chat">
+            <% @room_messages.each do |room_message| %>
+              <%= room_message %>
+            <% end %>
+          </div>
 
-    <%= form_for @room_message, remote: true do |form| %>
-      <div class="input-group mb-3">
-        <%= form.text_field :message %>
-        <div class="input-group-append">
-          <%= form.submit "Send", class: 'btn btn-primary chat-input' %>
+          <%= form_for @room_message, remote: true do |form| %>
+            <div class="input-group mb-3">
+              <%= form.text_field :message %>
+              <div class="input-group-append">
+                <%= form.submit "Send", class: 'button is-info chat-input' %>
+              </div>
+            </div>
+
+            <%= form.hidden_field :room_id, :value => @room.id %>
+          <% end %>
+        </div>
+        
+        <div class="column is-4" >
+          
         </div>
       </div>
+  </div> 
 
-      <%= form.hidden_field :room_id, :value => @room.id %>
-    <% end %>
-  </div>
 </div>

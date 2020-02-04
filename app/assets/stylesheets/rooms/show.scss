@@ -1,0 +1,33 @@
+.chat-dashboard {
+    padding-left: 0 !important;
+}
+.friend-rooms {
+    
+    border-right: 1px solid rgb(206, 206, 206);
+    background-color: white;
+}
+.room-status {
+    border-bottom: 1px solid rgb(206, 206, 206);
+    background-color: white;
+    height: 4em;
+
+}
+.columns {
+    
+    
+
+    .chat {
+        
+        background: white;
+        height: 50vh;
+        border-radius: 5px 5px 0 0;
+        overflow-y: auto;
+        width: 100%;
+      }
+      
+      .chat-input {
+        border-top: 0 none;
+        border-radius: 0 0 5px 5px;
+      }
+      
+}
