@@ -41,7 +41,7 @@
 
     <div class="field" id="birthday">
       <%= f.label :birthday, class: "sub-label" %><br />
-      <%= f.date_field :birthday %>
+      <%= f.date_field :birthday, placeholder: "MM-DD-YYYY", value: (f.object.birthday || Date.today.to_s(:db)) %>
     </div>
 
     <h3 class="sub-label">Gender</h3>

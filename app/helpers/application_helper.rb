@@ -17,6 +17,10 @@ module ApplicationHelper
     image_tag(gravatar_url, alt: user.first_name, class: 'gravatar')
   end
 
+  def gravatar_or_facebook_img(user)
+    user.image_link ? image_tag(user.image_link) : gravatar_for(user)
+  end
+
   def find_like_id(post)
     @like_id = post.likes.find { |like| like.liker_id == current_user.id }
   end

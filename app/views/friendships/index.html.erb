@@ -6,7 +6,7 @@
                 <li>
                     <div class="friend-name">    
                         <%= link_to friend do %>
-                            <%= gravatar_for friend %>
+                            <%= gravatar_or_facebook_img(friend) %>
                             <div id="friends-info">
                                 <p><%= friend.first_name + " #{friend.last_name}" %></p>
                                 <p id="friends-count"><%= "#{friend.friends.count} Friends" %></p>
