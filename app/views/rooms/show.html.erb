@@ -1,5 +1,3 @@
-
-
 <div class="columns">
   <div class="column is-one-fifth friend-rooms" >
     <h1 class>
@@ -9,7 +7,9 @@
   </div>
 
   <div class="column chat-dashboard">
-    <div class="column is-full room-status" ></div>
+    <div class="column is-full room-status" >
+      <h1>Friend's name</h1>
+    </div>
       <div class="columns">
         <div class="column is-8" >
           <div class="chat">
@@ -20,7 +20,7 @@
 
           <%= form_for @room_message, remote: true do |form| %>
             <div class="input-group mb-3">
-              <%= form.text_field :message %>
+              <%= form.text_field :message, placeholder: "Type a message..." %>
               <div class="input-group-append">
                 <%= form.submit "Send", class: 'button is-info chat-input' %>
               </div>

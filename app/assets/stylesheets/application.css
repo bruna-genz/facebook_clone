@@ -25,11 +25,8 @@
     font-family: FontAwesome;
     font-style: normal;  
  }
- body {
-   background-color: #E9EBEE;
-
- }
-
+ body,
  html {
-  background-color: #E9EBEE;
+   background-color: #E9EBEE;
+   height: 100%;
  }

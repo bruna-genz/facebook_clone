@@ -1,8 +1,7 @@
 .chat-dashboard {
     padding-left: 0 !important;
 }
-.friend-rooms {
-    
+.friend-rooms {  
     border-right: 1px solid rgb(206, 206, 206);
     background-color: white;
 }
@@ -10,24 +9,30 @@
     border-bottom: 1px solid rgb(206, 206, 206);
     background-color: white;
     height: 4em;
-
 }
 .columns {
-    
-    
-
+    height: 94.5%;
     .chat {
-        
         background: white;
-        height: 50vh;
-        border-radius: 5px 5px 0 0;
+        height: 96.5%;
         overflow-y: auto;
         width: 100%;
       }
-      
-      .chat-input {
-        border-top: 0 none;
-        border-radius: 0 0 5px 5px;
+      .new_room_message {
+        background-color: white;
+        .input-group {
+            display: flex;
+            border-top: 0 none;
+            border-radius: 0 0 5px 5px;
+            #room_message_message {
+                border-radius: 20px;
+                border: none;
+                width: 80%;
+                background-color: #F2F2F2;
+                padding-left: 10px;
+                margin: 5px 10px;
+            }
+        }
       }
       
 }
