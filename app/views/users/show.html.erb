@@ -32,7 +32,7 @@
         <% @user.friends[0..8].each do | friend | %>
             <li>
                 <%= link_to friend do %>
-                  <%= gravatar_for friend %>
+                  <%= gravatar_or_facebook_img(friend)%>
                   <div id="friend-name">
                     <%= friend.first_name + " #{friend.last_name}" %>
                   </div>

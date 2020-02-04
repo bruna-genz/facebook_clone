@@ -1,4 +1,4 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" id="navbar-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand" id="navbar-left">
     <div class="logo-container">
       <%= link_to root_path do %>
@@ -30,7 +30,7 @@
     
     <div class="navbar-brand">
         <%= link_to current_user, class: "navbar-link is-arrowless" do %>
-            <%= gravatar_for current_user %>
+            <%= gravatar_or_facebook_img(current_user) %>
             <%= current_user.first_name %>
         <% end %>
         <%= link_to root_path, class: "navbar-link is-arrowless" do %>
@@ -61,7 +61,7 @@
               <% current_user.friends_requests.each do |request| %>
                   <li>
                     <%= link_to request do %>
-                      <%= gravatar_for request %>
+                      <%= gravatar_or_facebook_img(request) %>
                       <%= request.first_name + " #{request.last_name}" %>
                     <% end %> 
                     <%= link_to find_friends_path, class: "dropdowb-button" do %>

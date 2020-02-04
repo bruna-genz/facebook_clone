@@ -2,7 +2,7 @@
     <div class="sticky">
         <div class="aside">
             <%= link_to current_user do %>
-                <%= gravatar_for current_user %>
+                <%= gravatar_or_facebook_img(current_user) %>
                 <%= current_user.first_name %>
                 <%= current_user.last_name %>
             <% end %>
