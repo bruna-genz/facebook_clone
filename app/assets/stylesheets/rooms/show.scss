@@ -2,7 +2,13 @@
     padding-left: 0 !important;
     padding-top: 0 !important;
 }
+#center { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 .friend-rooms {  
+   
     border-right: 1px solid rgb(206, 206, 206);
     background-color: white;
     .chat-title {
@@ -15,6 +21,17 @@
             color: black;
         }
     }
+    .create-room-btn {
+        display: flex;
+        margin: 10px 0;
+        width: 95%;
+        justify-content: center;
+        
+    }
+    .rooms-btns {
+        width: 95%;
+        margin: 10px 0 0 5px;
+    }
     .has-icons-left {
         margin-left: 10px;
         input {
@@ -26,9 +43,18 @@
     }
 }
 .room-status {
+    display: flex;
     border-bottom: 1px solid rgb(206, 206, 206) !important;
     background-color: white;
     height: 4em;
+    #name-time {
+        margin-left: 10px;
+        p {
+            font-size: 25px;
+            line-height: 0.8;
+            font-weight: bold;
+        }   
+    }
 }
 .chat-container {
     height: 93%;
@@ -68,7 +94,7 @@
         }
     }   
 }
-
+/*   RIGHT ASIDE   */
 .chat-friend-info {
     background-color: white;
     padding-left: 0 !important;
@@ -86,4 +112,5 @@
         height: 45%;
         padding-left: 12px;
     }
+    
 }

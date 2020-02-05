@@ -1,19 +1,19 @@
-<div>
+<div id="center">
   <div class="control has-icons-left">
     <input class="input is-rounded" type="text" placeholder="Search messenger">
     <span class="icon is-small is-left">
       <i class="fas fa-search"></i>
     </span>
   </div>
-  <%= link_to new_room_path, class: 'btn btn-primary' do %>
+  <%= link_to new_room_path, class: 'button is-info create-room-btn' do %>
     Create a room
   <% end %>
 </div>
 
 <% if @rooms.present? %>
-  <nav class="nav flex-column">
+  <nav class="nav-rooms">
     <% @rooms.each do |room| %>
-      <%= link_to room.name, room_path(room), class: 'nav-link room-nav-link' %>
+      <%= link_to room.name, room_path(room), class: 'rooms-btns button is-info is-outlined' %></br>
     <% end %>
   </nav>
 <% else %>

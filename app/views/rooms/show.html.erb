@@ -9,7 +9,11 @@
 
   <div class="column chat-dashboard">
     <div class="column is-full room-status" >
-      <%= @room.name %>
+      <%= gravatar_or_facebook_img(current_user) %>
+      <div id="name-time">
+        <p><%= @room.name %></p>
+        <%= "#{time_ago_in_words(@room.created_at)} ago" %>
+      </div>
     </div>
       <div class="columns chat-container">
         <div class="column is-8 no-padding" >
