@@ -56,4 +56,8 @@ module ApplicationHelper
   def find_inverse_friendship_id(user)
     @friendship_id = current_user.inverse_friendships.find { |friendship| friendship.user_id == user.id }
   end
+
+  def all_rooms
+    @rooms = Room.all
+  end
 end

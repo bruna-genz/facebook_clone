@@ -83,19 +83,16 @@
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+          <%= link_to "New group", new_room_path, class: 'navbar-item'%>
+          <% if all_rooms.present? %>
+              <% all_rooms.each do |room| %>
+                <%= link_to room.name, room_path(room), class: 'navbar-item' %>
+              <% end %>
+          <% else %>
+            <div class="text-muted">
+              The are no rooms
+            </div>
+          <% end %>
         </div>
     </div>
 

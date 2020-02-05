@@ -9,11 +9,11 @@
 
   <div class="column chat-dashboard">
     <div class="column is-full room-status" >
-      <h1>Friends name</h1>
+      <%= @room.name %>
     </div>
       <div class="columns chat-container">
         <div class="column is-8 no-padding" >
-          <div class="chat">
+          <div class="chat" data-channel-subscribe="room" data-room-id="<%= @room.id %>">
             <% @room_messages.each do |room_message| %>
               <%= gravatar_or_facebook_img(room_message.user) %>
               <%= room_message.message %></br>
@@ -37,16 +37,49 @@
             <%= form.hidden_field :room_id, :value => @room.id %>
           <% end %>
         </div>
+
+        <!-- SNIPPET -->
+        <div class="d-none" data-role="message-template">
+          <div class="chat-message-container">
+            <div class="row no-gutters">
+              <div class="col-auto text-center">
+                <img src="" class="avatar" alt="" data-role="user-avatar">
+              </div>
+
+              <div class="col">
+                <div class="message-content">
+                  <p class="mb-1" data-role="message-text"></p>
+
+                  <div class="text-right">
+                    <small data-role="message-date"></small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
         <div class="column is-4 chat-friend-info" >
           <div class="user-image border-bottom">
-            <h1>User name</h1>
+            <%= gravatar_or_facebook_img(current_user) %>
+            <%= current_user.first_name %>
           </div>
           <div class="chat-options border-bottom" >
             <h3>Options</h3>
+            <div>Search in Conversation</div>
+            <div>Edit Nicknames</div>
+            <div>Change Theme</div>
+            <div>Change Emoji</div>
           </div>
           <div class="chat-support">
             <h3>Privacy and Support</h3>
+            <div>Notifications</div>
+            <div>Ignore Messages</div>
+            <div>Block Messages</div>
+            <div>
+              Something's wrong
+              <small>Give feedback and report conversation</small>
+            </div>
           </div>
         </div>
       </div>
