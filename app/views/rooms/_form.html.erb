@@ -1,4 +1,29 @@
-<%= form_for @room do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Save", class: 'button is-success' %>
-<% end %>
+<section class="hero is-fullheight">
+      <%= form_for @room do |f| %>
+          <div class="hero-body">
+              <div class="container">
+                <div class="columns is-5-tablet is-4-desktop is-3-widescreen">
+                    <div class="column">
+                        <form class="box">
+                            <div class="field has-text-centered">
+                              <%=gravatar_or_facebook_img(current_user)%>
+                            </div>
+                            <div class="field"> 
+                                <div class="control has-icons-left">
+                                    <%= f.text_field :name, class:'input', placeholder:"e.g first room" %>
+                                    <span class="icon is-small is-left">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                </div>
+                            </div>
+                           
+                            <div class="field">
+                              <%= f.submit "Create", class: 'button is-success' %>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <% end %>
+      </section>
