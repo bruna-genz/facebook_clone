@@ -9,7 +9,23 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+
+    <% if user_signed_in? %>
+      <%= render 'layouts/partials/navbar' %>
+    <% end %>
+    
+    <% flash.each do |key, value| %>
+      <div class="flash">
+        <div class="<%= flash_class(key) %> notification">
+        <i class="close icon"></i>
+        <%= value %>
+        </div>
+      </div>
+    <% end %>
+
     <%= yield %>
+
   </body>
 </html>

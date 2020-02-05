@@ -1,0 +1,99 @@
+@import "../variables.scss";
+
+#navbar-top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2000;
+    background-color: $facebook-blue !important;
+    height: 42px;
+    .friend-notification {
+        background-color: red;
+        margin-top: 16px;
+        padding: 0 5px;
+        font-size: 10px;
+        border-radius: 50%;
+        color: white;
+    }
+    #navbar-left {
+        align-items: center;
+        margin-left: 25%;
+        @media (max-width: 1500px) {
+            margin-left: 8%;
+        }
+    }
+    .has-addons {
+        display: flex;
+        align-items: center;
+        margin: 0 2em 0 0.5em !important;
+    }
+    .fa {
+       font-size: 30px;
+        color: white;
+    }    
+    .navbar-link {
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+        &:hover {
+            background-color: rgba(28, 39, 63, 0.753);
+            color: white;
+        }
+        i {
+            color:rgb(28, 39, 63);
+            font-size: 17px;
+        }
+    }
+    .messenger {
+        width: 20px;
+        height: 20px;
+        fill: rgb(28, 39, 63);
+    }
+    .control {
+        input {
+            width: 25em;
+            height: 1.5em;
+        }
+        .button {
+            height: 1.5em;
+        }
+    }
+    .gravatar,
+    img {
+        border-radius: 50%;
+        margin-right: .5em;
+    }
+    .large {
+        width: 500%;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                border-bottom: solid 1px rgb(209, 213, 216);
+                padding-bottom: 5px;
+                margin-bottom: 5px;
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+                .dropdowb-button {
+                    width: auto;
+                    background-color: #3B5998;
+                    color: white;
+                    border: none;
+                    padding: .5em;
+                    margin: .5em 0;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    font-size: 11px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,42 @@
+<%= render 'users/profile_picturenav'%>
+<div class="columns container">
+    <div class="column is-three-quarters all-friends">
+        <ul>
+            <% @user.friends.each do | friend | %>
+                <li>
+                    <div class="friend-name">    
+                        <%= link_to friend do %>
+                            <%= gravatar_or_facebook_img(friend) %>
+                            <div id="friends-info">
+                                <p><%= friend.first_name + " #{friend.last_name}" %></p>
+                                <p id="friends-count"><%= "#{friend.friends.count} Friends" %></p>
+                            </div>
+                        <% end %>
+                    </div>
+                    
+                    <% if @user == current_user %>
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                    <span><i class="fas fa-check"></i> Friends</span>
+                                    
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-item">
+                                        <% find_friendship_id(friend) == nil ? find_inverse_friendship_id(friend) : find_friendship_id(friend) %>
+                                        <%= link_to user_friendship_path(friend, @friendship_id), method: :delete, class: "cancel-request" do %>
+                                            Delete friend
+                                        <% end %>                                                                       
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    <% end %>
+                    
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</div>

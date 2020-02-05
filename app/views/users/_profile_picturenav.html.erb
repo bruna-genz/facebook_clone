@@ -1,0 +1,20 @@
+<div class="columns container">
+    
+    <div class="column is-three-quarters profile-img-bg">
+    
+  
+    </div>
+    <div id="profile-img">
+        <% if @user ||= current_user %>
+            <%= gravatar_or_facebook_img(@user) %>
+            <%= link_to current_user do %>
+                <p><%= "#{@user.first_name}" + " #{@user.last_name}"%></p>
+            <% end %>
+        <% end %>
+    </div>
+</div>
+<div class="columns container">
+    <div class="column is-three-quarters profile-navbar">
+      <%= render 'users/profile_navbar'%>
+    </div>
+</div>

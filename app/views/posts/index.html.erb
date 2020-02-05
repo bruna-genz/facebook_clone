@@ -1,0 +1,33 @@
+<div class="columns">
+   
+   <%= render 'aside'%>  
+
+   <div class="column is-one-third">
+      
+      <%= render 'post_form' %>
+
+      <div class="timeline">
+         <% @posts.each do | post |%>
+            <ul>
+               <li>
+                  <%= render post %>
+               </li>
+            </ul>
+         <% end %>
+      </div>
+   </div>
+
+   <div class="column column-3">
+      <div class="sticky"> 
+         <div id="white-bg">
+            English (US) · Français (Canada) · <br /> 
+            Español · Português (Brasil) · Deutsch
+         </div>
+         <div>
+            Privacy · Terms · Advertising · Ad Choices · <br />
+            Cookies · More <br />
+            Facebook © 2020
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,184 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.new_user {
+    display: flex;
+    align-items: center;
+    background-color: #3B5998;
+    color: white;
+    justify-content: space-around;
+    padding: 0 13em;
+    .form-right {
+        display: flex;
+        margin-top: 1em;
+        .field {
+            margin: 0 0.5em;
+            #user_email,
+            #user_password {
+                border: solid 1px black;
+                width: 12em;
+                height: 2em;
+                padding: 0.5em;
+            }
+        }
+        #remember-me {
+            margin: 0.5em;
+        }
+        h1 {
+            color: white;
+        }
+    }
+    .form-left {
+        margin-top: 1em;
+    }
+    #sign-in-btn {
+        background-color: rgb(89, 117, 177);
+        border: solid 1px  rgb(42, 56, 85);
+        color: white;
+        padding: 0.3em;
+        font-weight: bold;
+        margin: 1.4em 0;
+        &:hover {
+            background-color: #3B5998;
+        }
+    }
+}
+
+.sign-up-form {
+    display: flex;
+    margin-top: 1em;
+    justify-content: center;
+    padding: 0 13em;
+    @media (max-width: 1500px) {
+        padding: 0;
+    }
+    font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+    .left-container {
+        margin-right: 10.5em;
+        @media (max-width: 1500px) {
+            margin-right : 3.2em;  
+        }
+        input {
+            background-color: rgb(249, 251, 255);
+            border-radius: 5px;
+            height: 2.5em;
+            width: 25em;
+            margin: 5px 0;
+            padding-left: 5px;
+            border: solid 1px rgb(190, 193, 197);
+        }
+        h2 {
+            font-weight: bold;
+            font-size: 36px;
+            
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 1em;
+        }
+
+        .names {
+            display: flex;
+            input {
+                margin-right: 1em;
+                width: 12em;
+            }
+        }
+        .sub-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #90949C;
+            margin-top: 10px;
+        }
+        #birthday {
+            margin-top: 15px;
+        }
+        #radio-btn {
+            display: flex;
+            align-items: center;
+            input {
+                width: auto;
+                margin-right: 5px;
+            }
+            label {
+                margin-right: 15px;
+            }
+        }
+        #info {
+            width: 20em;
+            p {
+                font-size: 10px;
+                line-height: 1.5em;
+                color: #90949C;
+            }
+        }
+        #sign-up-btn {
+            width: 10em;
+            height: 2em; 
+            color: white;
+            font-size: 20px;
+            background: linear-gradient( #67ae55,#578843);
+            background-color: rgba(0, 0, 0, 0);
+            background-color:#69a74e;
+            box-shadow: inset 0 1px 1px#a4e388;
+            border-color:#3b6e22 #3b6e22#2c5115;
+        }
+    }
+    .right-container {
+        width: 45%;
+        margin: 1em 0 0 10.5em;
+        line-height: 2em;
+        @media (min-width: 1263px) {
+            margin-left : 1.2em;
+            padding-left: 2em;   
+        }
+        h1 {
+            font-size: 25px; 
+            margin-bottom: 2em;
+        }
+        #connect-img {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/7XdR1KwCifL.png);
+            background-size: 600px;
+            background-repeat: no-repeat;
+            fill: white;
+            width: 100%;
+            height: 300px;
+            margin: 0;
+            @media (min-width: 1263px) {
+                background-size: 450px;
+            }
+        }
+    }
+}
+
+.signup-errors {
+    padding-top: 2em;
+    flex-direction: column !important;
+    a {
+        background-color: rgb(89, 117, 177);
+        border: solid 1px  rgb(42, 56, 85);
+        color: white;
+        padding: 0.3em;
+        font-weight: bold;
+        margin: 1.4em 0;
+        &:hover {
+            background-color: #3B5998;
+        }
+    }
+}
+
+/*
+.footer-lan {
+    width: 100%;
+    height: 10em;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    background-color: white;
+    text-decoration: none;
+    font-size: 8px;
+
+}
+*/

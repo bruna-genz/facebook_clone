@@ -6,10 +6,32 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.41.5"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
-  }
+  },
+  "description": "In this app we created a facebook like application. It has the following functionalities:\r - User can create an account;\r - Users can make posts;\r - Users can like and comment on posts;\r - Users can request friendship from others sign up users.",
+  "main": "babel.config.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bruna-genz/facebook_clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bruna-genz/facebook_clone/issues"
+  },
+  "homepage": "https://github.com/bruna-genz/facebook_clone#readme"
 }

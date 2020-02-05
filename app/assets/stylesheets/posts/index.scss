@@ -1,0 +1,292 @@
+@import "bulma";
+@import "font-awesome";
+@import "../variables.scss";
+
+.gravatar,
+img {
+    height: 30px;
+    width: auto;
+    border-radius: 50%;
+}
+.column-3 {
+    padding-right: 20%;
+    padding-top: 2em;
+    .sticky {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 70px;
+    }
+    #white-bg {
+        background-color: white;
+        border: 1px solid rgb(155, 155, 155);
+        border-radius: 2px;
+        padding: 1.5em;
+    }
+}
+
+.column-1 {
+    padding-left: 20%;
+    padding-top: 2em;
+    @media only screen and (max-width: 1463px) {
+        padding-left: 0;
+    }
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-size: 15px;
+    .gravatar,
+    img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    .sticky {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 70px;
+    }
+    .aside {
+        
+        margin-left: 40%;
+        margin-bottom: 10px;
+        padding: 3px;
+        &:hover {
+            background-color: #F5F6F7;
+            border: 1px solid rgb(155, 155, 155);
+        }
+        a {
+            color: black;
+        }
+    }
+    .aside-links {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40%;
+        justify-content: baseline;
+        img {
+            width: 15px;
+            height: 15px;
+        }
+        a {
+            color: black;
+            padding: 3px;
+            &:hover {
+                background-color: #F5F6F7;
+                border: 1px solid rgb(155, 155, 155);
+            }
+        }
+        p {
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(124, 128, 131);
+        }
+    }
+}
+
+/*           POST FORM                   */
+
+.new_post {
+    margin-top: 1em;
+    border: solid 1px rgb(209, 213, 216);
+    .label {
+        background-color: #F5F6F7;
+        border-bottom: solid 1px rgb(209, 213, 216);
+        margin: 0;
+        padding: 5px;
+        font-size: 15px;
+        color: rgb(90, 92, 94);
+    }
+    .post-form-box {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        .gravatar,
+        img {
+            margin-left: 10px;
+            height: 45px;
+        }
+        .post-text {
+            width: 90%;
+            height: 70px;
+            resize: none;
+            border: none;
+            padding: 4% 10px;   
+            &:focus {
+                outline: none;
+                }        
+        }
+    }
+    .post-btn {
+        display: flex;
+        justify-content: center;
+        background: white;
+        border-top: solid 1px rgb(209, 213, 216);
+        input {
+            width: 90%;
+            background-color: #3B5998;
+            color: white;
+            border: none;
+            padding: .5em 0;
+            margin: .5em 0;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    }
+}
+
+/*           TIMELINE                   */
+
+.timeline {
+    
+    li {
+        border: solid 1px rgb(209, 213, 216);
+        background-color: white;
+        margin-top: 5px;
+        padding: 8px 8px 0 8px;
+        
+        .creator {
+            display: flex;
+            .gravatar,
+            img {
+                padding-right: 3px;
+            }
+            
+            color: #3B5998;
+            font-weight: bold;
+        }
+        #time {
+            font-size: 12px;
+            color: rgb(90, 92, 94);
+
+        }  
+
+/*           LIKES                   */
+
+        .likers {
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-size: 14px;
+                i {
+                    color: #4080FF;
+                }
+            }
+            
+        }
+    }
+
+    .likes {
+        display: flex;
+        border-top:1px solid gainsboro;
+        justify-content: space-around;
+        
+        input, button {
+            margin: 2px 0;
+            height: 2em;
+            width: 8em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: white;
+            color: rgb(155, 155, 155);
+            font-size: 12px;
+            text-align: center;
+            border: none;
+            &:hover {
+                background-color: rgb(219, 219, 219);
+                cursor: pointer;
+                border-radius: 1px;
+            }
+            i {
+                font-size: 17px;
+                margin-right: 4px;
+            }
+            
+        }
+        .unlike {
+            color: #4080FF;
+            font-weight: bold;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            i {
+                font-size: 17px;
+                margin-right: 4px;
+            }
+        }
+    }   
+}
+ 
+/*          COMMENTS FORM                 */
+
+.comment-form {
+    display: flex;
+    margin: 5px;
+    border-top:1px solid gainsboro;
+    padding-top: 10px;    
+    form {
+        background-color: #F2F3F5;
+        border: solid 1px rgb(219, 219, 219);
+        border-radius: 20px;
+        width: 100%;
+        margin-left: 5px;
+        display: flex;
+        padding: 3px 0;
+        justify-content: space-between;
+        textarea {
+            background-color: #F2F3F5;
+            border: none;
+            resize: none;
+            margin: 8px 0 0 13px;
+            height: 1.5em;
+            width: 90%;
+            &:focus {
+                outline: none;
+                }
+        }
+        button {
+            background-color: #F2F3F5;
+            border: solid 1px rgb(172, 169, 169);
+            border-radius: 50%;
+            padding: 5px 7px;
+            margin-right: 10px;
+            color: rgb(172, 169, 169);
+            &:hover {
+                cursor: pointer;
+                background-color: #4080FF;
+                color: white;
+            }
+        }
+    }
+}
+/*          COMMENTS               */
+
+.comments-feed {
+    padding-bottom: 10px;
+    li {
+        display: flex;
+        border: none;
+        .comment {
+            background-color: #F2F3F5;
+            border-radius: 10px;
+            width: 100%;
+            padding-left: 5px;
+            margin-left: 5px;
+            .full-name {
+                display: flex;
+                color:  #3B5998;
+                
+                p {
+                    color: black;
+                    margin-left: 5px;
+                }
+            }
+
+            .links {
+                color:  #3B5998;
+            }
+        }
+    }
+    #comment-links {
+        margin: 0;
+        padding: 0 0 0 50px;
+        font-size: 14px;
+    }
+}

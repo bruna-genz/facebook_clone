@@ -1,24 +1,30 @@
-# README
+# Facebook Clone
+In this app we created a facebook like application. It has the following functionalities:
+- User can create an account;
+- Users can make posts;
+- Users can like and comment on posts;
+- Users can request friendship from others sign up users.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Preview
 
-Things you may want to cover:
+### Models data architecture
 
-* Ruby version
+![img](app/assets/images/data_architecture.png)
 
-* System dependencies
+## Built with
 
-* Configuration
+- HTML 5 (erb);
+- CSS 3 (scss);
+- Ruby 2.6.3;
+- Rails 6.0.1;
+- Semantic UI sass.
 
-* Database creation
+## Authors
 
-* Database initialization
+:woman: **Bruna Genz**
 
-* How to run the test suite
+- Github: [@bruna-genz](https://github.com/bruna-genz)
 
-* Services (job queues, cache servers, search engines, etc.)
+:man: **Nicolás Mariño**
 
-* Deployment instructions
-
-* ...
+- Github: [@nicolasmarino99](https://github.com/nicolasmarino99)

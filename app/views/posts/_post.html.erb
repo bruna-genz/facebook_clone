@@ -1,0 +1,20 @@
+<div class= "creator">
+    <%= link_to post.creator, class: "creator" do %>
+        <%= gravatar_for post.creator %>
+        <%= post.creator.first_name %> 
+        <%= post.creator.last_name %>
+    <% end %>
+</div>
+<div id="time">
+    <%= "#{time_ago_in_words(post.created_at)} ago" %>
+</div>
+    <div class= "content">
+    <%= post.content %>
+</div>
+
+
+<%= render partial: "posts/like", locals: { post: post } %>
+
+<%= render partial: "posts/comment", locals: { post: post } %>
+
+    
