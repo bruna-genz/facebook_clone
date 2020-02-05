@@ -8,7 +8,6 @@
     flex-direction: column;
 }
 .friend-rooms {  
-   
     border-right: 1px solid rgb(206, 206, 206);
     background-color: white;
     .chat-title {
@@ -69,6 +68,20 @@
         height: 95%;
         overflow-y: auto;
         width: 100%;
+        padding: 10px 0 0 12px;
+        .message-container {
+            display: flex;
+            padding-right: 12px;
+            margin-bottom: 10px;
+            p {
+                background-color: #0099FF;
+                color: white;
+                padding: 0 10px;
+                border-radius: 15px;
+                width: auto;
+                margin-left: 5px;
+            }
+        }
       }
     .new_room_message {
     background-color: white;
@@ -103,14 +116,44 @@
         padding-left: 12px;
     }
     .user-image {
-        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 15px;
+        img {
+            width: 90px;
+            height: 90px;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 25px;
+            line-height: 0.8;
+            font-weight: bold;
+        }
+        
     }
-    .chat-options {
-        height: 35%;
-    }
+    .chat-options,
     .chat-support {
-        height: 45%;
-        padding-left: 12px;
-    }
-    
+        padding-left: 0;
+        h3 {
+            padding-left: 12px !important;
+            color: #9E9E9E;
+            font-weight: bold;
+            padding: 10px 0 5px 0;
+            &:hover {
+                background-color: rgb(238, 237, 237);
+            }
+        }
+        p { 
+            display: flex;
+            justify-content: space-between;
+            padding: 0 12px !important;
+            font-size: 15px;
+            margin: 5px 0;
+            i {
+                font-size: 20px;
+                color: #0099FF;
+            }
+        }
+    }    
 }
