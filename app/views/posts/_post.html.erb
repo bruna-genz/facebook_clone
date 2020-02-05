@@ -1,6 +1,6 @@
 <div class= "creator">
     <%= link_to post.creator, class: "creator" do %>
-        <%= gravatar_for post.creator %>
+        <%= gravatar_or_facebook_img(post.creator) %>
         <%= post.creator.first_name %> 
         <%= post.creator.last_name %>
     <% end %>

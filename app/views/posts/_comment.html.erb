@@ -1,5 +1,5 @@
 <div class="comment-form">
-    <%= gravatar_for current_user %>
+    <%= gravatar_or_facebook_img(current_user) %>
     <%= form_for @comment, :url => { :controller => "comments", :action => "create" }, :html => {:method => :post, :class => 'new-comment'} do |f| %>
         <%= f.text_area :sub_content, placeholder: "Write a comment..." %>
         <%= f.hidden_field :post_id, :value => post.id %>
@@ -12,7 +12,7 @@
     <% find_comment(post).each do |comment|%>
         <ul>
             <li>
-                <%= gravatar_for comment.commenter %>
+                <%= gravatar_or_facebook_img(comment.commenter) %>
                 <div class="comment" >
                     <div class="full-name" >
                         <%= comment.commenter.first_name%>
