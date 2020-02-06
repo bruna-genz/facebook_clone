@@ -78,13 +78,8 @@ class User < ApplicationRecord
     end
   end
 
-  def self.search(search)
-    if search
-      queried_user = User.find_by(first_name: search)
-    else
-      @all_users = User.all
-    end
-  end
+  
+  
 
 
 
