@@ -4,7 +4,8 @@ In this app we created a facebook like application. It has the following functio
 - Users can make posts;
 - Users can like and comment on posts;
 - Users can request friendship from others sign up users;
-- Users can create chat rooms and talk to other users (see section Future Improvements).
+- Users can create chat rooms and talk to other users (see section Future Improvements);
+- Functional search bar to find users.
 
 ## Preview
 

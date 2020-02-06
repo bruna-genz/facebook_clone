@@ -13,10 +13,9 @@ class UsersController < ApplicationController
     @post = Post.new
     @comment = Comment.new
   end
+ 
   private 
     def search_params
       params.require(:user).permit(:search)
     end
-  
-
 end
