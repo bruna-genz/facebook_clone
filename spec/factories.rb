@@ -2,11 +2,11 @@ FactoryBot.define do
   factory :room_message do
     room { nil }
     user { nil }
-    message { "MyText" }
+    message { 'MyText' }
   end
 
   factory :room do
-    name { "MyString" }
+    name { 'MyString' }
   end
 
   factory :user do

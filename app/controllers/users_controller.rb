@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def index
     if params[:search]
-      @users = User.where("first_name LIKE?","%"+ params[:search]+"%")
+      @users = User.where('first_name LIKE?', '%' + params[:search] + '%')
       flash[:alert] = "No user with name #{params[:search]} has been found" if @users.empty?
     else
       @users = User.all
@@ -13,9 +13,10 @@ class UsersController < ApplicationController
     @post = Post.new
     @comment = Comment.new
   end
- 
-  private 
-    def search_params
-      params.require(:user).permit(:search)
-    end
+
+  private
+
+  def search_params
+    params.require(:user).permit(:search)
+  end
 end
