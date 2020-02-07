@@ -31,4 +31,7 @@ Rails.application.routes.draw do
     post 'friendships/confirm', as: 'confirm_friendship'
     delete 'friendships/:id' => "friendships#inverse_destroy", as: 'delete_request'
   end
+
+
+  
 end
