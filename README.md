@@ -35,13 +35,17 @@ In this app we created a facebook like application. It has the following functio
 
 ## Authors
 
+:man: **Nicolás Mariño Parra**
+
+- Github: [@nicolasmarino99](https://github.com/nicolasmarino99)
+- Twitter: [@nicolasmarino99](https://twitter.com/nicolasmarino99)
+- Linkedin: [Nicolás Mariño Parra](https://www.linkedin.com/in/nicol%C3%A1s-mari%C3%B1o-parra-45a707177/)
+
 :woman: **Bruna Genz**
 
 - Github: [@bruna-genz](https://github.com/bruna-genz)
-
-:man: **Nicolás Mariño**
-
-- Github: [@nicolasmarino99](https://github.com/nicolasmarino99)
+- Twitter: [@Bruna_GK](https://twitter.com/Bruna_GK)
+- Linkedin: [Bruna Genz](https://www.linkedin.com/in/brunagenz/)
 
 ## Acknowledgements
 
