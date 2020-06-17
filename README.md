@@ -4,11 +4,11 @@
 
 - [About](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#about)
 - [Preview](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#preview)
-- [Build with](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#build-with)
+- [Built with](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#built-with)
 - [Prerequisites](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#prerequisites)
 - [Installation](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#installation)
-- [Authors](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#author)
-- [Acknowledgments](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#acknowledgments)
+- [Authors](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#authors)
+- [Acknowledgments](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#acknowledgements)
 
 ## About
 
