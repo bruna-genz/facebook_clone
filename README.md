@@ -1,4 +1,17 @@
 # Facebook Clone
+
+## Table of Contents
+
+- [About](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#about)
+- [Preview]()
+- [Build with](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#build-with)
+- [Prerequisites](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#prerequisites)
+- [Installation](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#installation)
+- [Authors](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#author)
+- [Acknowledgments](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#acknowledgments)
+
+## About
+
 In this app we created a facebook like application. It has the following functionalities:
 - User can create an account or sign up with Facebook;
 - Users can make posts;
@@ -21,7 +34,6 @@ In this app we created a facebook like application. It has the following functio
 ![img](app/assets/images/chat.png)
 
 ### Models data architecture
-
 ![img](app/assets/images/data_architecture.png)
 
 ## Built with
@@ -32,6 +44,13 @@ In this app we created a facebook like application. It has the following functio
 - Rails 6.0.1;
 - JavaScript;
 - Bulma.
+
+## Prerequisites
+
+- Ruby
+- Rails
+
+## Instalation 
 
 ## Authors
 
