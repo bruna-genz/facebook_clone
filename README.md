@@ -94,11 +94,12 @@ This project has unit and integration tests. To run the tests, use the following
 - Linkedin: [Bruna Genz](https://www.linkedin.com/in/brunagenz/)
 - Email: brunagenz92@gmail.com
 
-## Acknowledgements
-
-- To create the friendships logic, we use the following tutorial as reference: https://smartfunnycool.com/friendships-in-activerecord/;
-- And for the chat: https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets;
 
 ## Future improvements:
 
 - Currently, the user has to refresh the page on the chat to display new messages. The goal is to make the chat asynchronous. 
+
+## Acknowledgements
+
+- To create the friendships logic, we use the following tutorial as reference: https://smartfunnycool.com/friendships-in-activerecord/;
+- And for the chat: https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets;
