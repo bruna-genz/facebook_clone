@@ -9,11 +9,12 @@
 - [Installation](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#installation)
 - [Testing](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#testing)
 - [Authors](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#authors)
+- [Future improvements](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#future-improvements)
 - [Acknowledgments](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#acknowledgements)
 
 ## About
 
-In this app we created a facebook like application. It has the following functionalities:
+In this app, we created a Facebook-like application. It has the following functionalities:
 - User can create an account or sign up with Facebook;
 - Users can make posts;
 - Users can like and comment on posts;
@@ -44,7 +45,7 @@ In this app we created a facebook like application. It has the following functio
 - Ruby
 - Rails
 
-## Instalation 
+## Installation 
 
 To install a local version of this project, follow these steps:
 
@@ -95,8 +96,8 @@ This project has unit and integration tests. To run the tests, use the following
 
 ## Acknowledgements
 
-- To create the Friendships we use the following tutorial as reference: https://smartfunnycool.com/friendships-in-activerecord/;
-- To the chat: https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets;
+- To create the friendships logic, we use the following tutorial as reference: https://smartfunnycool.com/friendships-in-activerecord/;
+- And for the chat: https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets;
 
 ## Future improvements:
 
