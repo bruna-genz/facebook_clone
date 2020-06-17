@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-- [About](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#about)
-- [Preview]()
-- [Build with](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#build-with)
-- [Prerequisites](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#prerequisites)
-- [Installation](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#installation)
-- [Authors](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#author)
-- [Acknowledgments](https://github.com/bruna-genz/shooter_game/blob/testing/README.md#acknowledgments)
+- [About](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#about)
+- [Preview](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#preview)
+- [Build with](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#build-with)
+- [Prerequisites](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#prerequisites)
+- [Installation](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#installation)
+- [Authors](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#author)
+- [Acknowledgments](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#acknowledgments)
 
 ## About
 
