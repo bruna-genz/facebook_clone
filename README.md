@@ -7,6 +7,7 @@
 - [Built with](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#built-with)
 - [Prerequisites](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#prerequisites)
 - [Installation](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#installation)
+- [Testing](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#testing)
 - [Authors](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#authors)
 - [Acknowledgments](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#acknowledgements)
 
@@ -21,20 +22,13 @@ In this app we created a facebook like application. It has the following functio
 - Functional search bar to find users.
 
 ## Preview
-
 [Live version](https://fb-clone-bruna-nico.herokuapp.com/contents/new)
-
-### Login page
-![img](app/assets/images/login_page.png)
 
 ### Home page
 ![img](app/assets/images/home_page.png)
 
 ### Chat
 ![img](app/assets/images/chat.png)
-
-### Models data architecture
-![img](app/assets/images/data_architecture.png)
 
 ## Built with
 
@@ -51,6 +45,37 @@ In this app we created a facebook like application. It has the following functio
 - Rails
 
 ## Instalation 
+
+To install a local version of this project, follow these steps:
+
+- Clone the repository running the following command: 
+
+```
+git clone git@github.com:bruna-genz/facebook_clone.git
+```
+
+- Open the project's folder on your text editor and install the required gems by running:
+
+```
+bundle install
+```
+- Migrate the database to your machine:
+
+```
+rails db:migrate
+```
+
+- Start the server:
+
+```
+rails server
+```
+
+- With the server running, go to ```http://localhost:3000``` and the app should be working.
+
+## Testing
+
+This project has unit and integration tests. To run the tests, use the following command: ```rspec```.
 
 ## Authors
 
