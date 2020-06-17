@@ -5,8 +5,9 @@
 - [About](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#about)
 - [Preview](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#preview)
 - [Built with](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#built-with)
-- [Prerequisites](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#prerequisites)
 - [Installation](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#installation)
+  - [Prerequisites](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#prerequisites)
+  - [Downloading and intalling steps](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#downloading-and-intalling-steps)
 - [Testing](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#testing)
 - [Authors](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#authors)
 - [Future improvements](https://github.com/bruna-genz/facebook_clone/blob/master/README.md#future-improvements)
@@ -40,12 +41,14 @@ In this app, we created a Facebook-like application. It has the following functi
 - JavaScript;
 - Bulma.
 
-## Prerequisites
+## Installation 
+
+#### Prerequisites
 
 - Ruby
 - Rails
 
-## Installation 
+#### Downloading and installing steps: 
 
 To install a local version of this project, follow these steps:
 
